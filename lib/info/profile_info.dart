@@ -3,15 +3,18 @@ import 'package:cv_web/strings.dart';
 import 'package:flutter_web/material.dart';
 
 class ProfileInfo extends StatelessWidget {
-
   final mainData = Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
       Text(
         Strings.DESCRIPTION,
         softWrap: true,
+        maxLines: null,
+        overflow: TextOverflow.ellipsis,
         textScaleFactor: 1.2,
-        style: TextStyle(color: Colors.white70),
+        style: TextStyle(
+          color: Colors.black,
+          fontFamily: 'MonteSerrat',
+        ),
       ),
     ],
   );
@@ -19,17 +22,14 @@ class ProfileInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveWidget(
-      largeScreen: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[mainData],
-      ),
-      smallScreen: Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          mainData
-        ],
+      largeScreen: Container(
+        width: ResponsiveWidget.getProfileInfoWidth(context),
+        decoration: BoxDecoration(color: Color(0xffe5e8ef)),
+        child: Column(
+          children: <Widget>[
+            mainData,
+          ],
+        ),
       ),
     );
   }

@@ -1,4 +1,4 @@
-import 'package:cv_web/profile_page.dart';
+import 'package:cv_web/main_page.dart';
 import 'package:flutter_web/material.dart';
 
 main() {
@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColorDark: Colors.black,
+        brightness: Brightness.light,
+        primaryColorLight: Colors.white,
       ),
-      home: ProfilePage(),
+      home: MainPage(),
     );
   }
 }
