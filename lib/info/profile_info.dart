@@ -8,8 +8,6 @@ class ProfileInfo extends StatelessWidget {
       Text(
         Strings.DESCRIPTION,
         softWrap: true,
-        maxLines: null,
-        overflow: TextOverflow.ellipsis,
         textScaleFactor: 1.2,
         style: TextStyle(
           color: Colors.black,
@@ -22,13 +20,15 @@ class ProfileInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveWidget(
-      largeScreen: Container(
-        width: ResponsiveWidget.getProfileInfoWidth(context),
-        decoration: BoxDecoration(color: Color(0xffe5e8ef)),
-        child: Column(
-          children: <Widget>[
-            mainData,
-          ],
+      largeScreen: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Container(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              mainData,
+            ],
+          ),
         ),
       ),
     );

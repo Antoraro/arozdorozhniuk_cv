@@ -29,7 +29,7 @@ class PrivateInfo extends StatelessWidget {
         SizedBox(height: 10),
         Text(
           Strings.NAME + '\n' + Strings.SURNAME,
-          textScaleFactor: 3,
+          textScaleFactor: 2.7,
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
@@ -51,12 +51,17 @@ class PrivateInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveWidget(
       largeScreen: Container(
-        width: ResponsiveWidget.getPrivateInfoWidth(context),
         decoration: BoxDecoration(color: Color(0xffe5e8ef)),
-        child: Column(
-          children: <Widget>[
-            header,
-          ],
+        child: Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              header,
+              SizedBox(height: double.infinity),
+            ],
+          ),
         ),
       ),
     );
