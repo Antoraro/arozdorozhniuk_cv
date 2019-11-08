@@ -59,7 +59,6 @@ class PrivateInfo extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               header,
-              SizedBox(height: double.infinity),
             ],
           ),
         ),
