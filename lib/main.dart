@@ -1,5 +1,6 @@
-import 'package:cv_web/main_page.dart';
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
+
+import 'layout_template.dart';
 
 main() {
   runApp(MyApp());
@@ -11,12 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
       theme: ThemeData(
-        brightness: Brightness.light,
-        primaryColorLight: Colors.white,
+        primarySwatch: Colors.blue,
+        textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Open Sans'),
       ),
-      home: MainPage(),
+      home: LayoutTemplate(),
     );
   }
 }

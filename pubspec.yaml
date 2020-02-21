@@ -1,24 +1,40 @@
-name: cv_web
-description: CV Anton Rozdorozhniuk
+name: the_basics
+description: A new Flutter project.
+
+version: 1.0.0+1
 
 environment:
-  sdk: ">=2.2.2 <3.0.0"
+  sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
-  flutter_web: any
-  flutter_web_ui: any
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  responsive_builder: ^0.1.4
+  provider_architecture:
+  provider: ^3.1.0
+  http: ^0.12.0+2
 
 dev_dependencies:
-  build_runner: ^1.6.4
-  build_web_compilers: ^2.1.4
-  pedantic: ^1.0.0
+  flutter_test:
+    sdk: flutter
 
-dependency_overrides:
-  flutter_web:
-    git:
-      url: https://github.com/flutter/flutter_web
-      path: packages/flutter_web
-  flutter_web_ui:
-    git:
-      url: https://github.com/flutter/flutter_web
-      path: packages/flutter_web_ui
+
+# The following section is specific to Flutter.
+flutter:
+
+  uses-material-design: true
+
+#  assets:
+#    # assets-generator-begin
+#    # assets/img/*
+#    # assets-generator-end
+
+  fonts:
+    - family: Open Sans
+      fonts:
+        - asset: assets/fonts/OpenSans-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 400
