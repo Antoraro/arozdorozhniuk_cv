@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:the_basics/ui/constants/UISize.dart';
+import 'package:arozd_cv/ui/constants/UISize.dart';
 
 class HeaderView extends StatelessWidget {
   @override
