@@ -1,35 +1,30 @@
+import 'package:arozd_cv/ui/constants/UISize.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:arozd_cv/ui/constants/UISize.dart';
+import 'package:flutter/widgets.dart';
 
 class HeaderView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: UISize.headerHeight,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(UISize.pLarge),
-        ),
-        shadowColor: Colors.grey,
-        elevation: UISize.cardElevation,
-        child: Padding(
-          padding: EdgeInsets.all(UISize.pLarge),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'Anton Rozdorozhniuk',
-                style: Theme.of(context).textTheme.headline3,
-              ),
-              Text(
-                'Software Engineer',
-                style: Theme.of(context).textTheme.subtitle1,
-              ),
-            ],
-          ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: UISize.pSmall),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text(
+              'Anton Rozdorozhniuk',
+              style: Theme.of(context).textTheme.headline4.copyWith(
+                    color: Colors.black,
+                  ),
+            ),
+            Text(
+              'Software Engineer',
+              style: Theme.of(context).textTheme.subtitle1,
+            ),
+          ],
         ),
       ),
     );

@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:arozd_cv/ui/constants/UISize.dart';
 import 'package:arozd_cv/ui/views/header_view.dart';
+import 'package:arozd_cv/ui/views/info_view.dart';
+import 'package:flutter/material.dart';
 
 class DesktopPage extends StatelessWidget {
   @override
@@ -13,6 +14,7 @@ class DesktopPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             HeaderView(),
+            InfoView(),
           ],
         ),
       ),
