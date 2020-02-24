@@ -9,6 +9,7 @@ class LayoutTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizeInfo) => Scaffold(
+        backgroundColor: Colors.grey.withOpacity(0.2),
         body: _buildBody(screenType: sizeInfo.deviceScreenType),
       ),
     );

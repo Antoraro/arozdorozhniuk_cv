@@ -6,5 +6,7 @@ class UISize {
 
   static const double maxWidth = 1000.0;
   static const double headerHeight = 160.0;
-  static const double cardElevation = 5.0;
+  static const double cardElevation = 8.0;
+  static const double circleRadius = 90.0;
+  static const double linkButtonSize = 40.0;
 }
