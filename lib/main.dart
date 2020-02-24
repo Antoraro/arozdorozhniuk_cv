@@ -14,7 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Anton Rozdorozhniuk CV',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+        textTheme:
+            Theme.of(context).textTheme.apply(fontFamily: 'San Francisco'),
+      ),
       home: LayoutTemplate(),
     );
   }

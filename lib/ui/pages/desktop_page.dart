@@ -1,6 +1,6 @@
 import 'package:arozd_cv/ui/constants/UISize.dart';
-import 'package:arozd_cv/ui/views/header_view.dart';
 import 'package:arozd_cv/ui/views/info_view.dart';
+import 'package:arozd_cv/ui/views/skill_view.dart';
 import 'package:flutter/material.dart';
 
 class DesktopPage extends StatelessWidget {
@@ -13,8 +13,8 @@ class DesktopPage extends StatelessWidget {
         constraints: BoxConstraints(maxWidth: UISize.maxWidth),
         child: Column(
           children: <Widget>[
-            HeaderView(),
             InfoView(),
+            SkillView(),
           ],
         ),
       ),
