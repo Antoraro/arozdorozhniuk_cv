@@ -53,12 +53,14 @@ class SkillView extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 3,
-                child: Wrap(
-                  alignment: WrapAlignment.start,
-                  textDirection: TextDirection.ltr,
-                  spacing: UISize.pSmall,
-                  children: mySkills.map((s) => SkillChip(s)).toList(),
+                flex: 4,
+                child: SingleChildScrollView(
+                  child: Wrap(
+                    alignment: WrapAlignment.start,
+                    textDirection: TextDirection.ltr,
+                    spacing: UISize.pSmall,
+                    children: mySkills.map((s) => SkillChip(s)).toList(),
+                  ),
                 ),
               ),
             ],
