@@ -22,11 +22,6 @@ class SkillView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle _languageStyle =
-        Theme.of(context).textTheme.subtitle1.copyWith(
-              fontWeight: FontWeight.w600,
-            );
-
     return SizedBox(
       width: double.infinity,
       height: UISize.headerHeight,
@@ -50,9 +45,9 @@ class SkillView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      LanguageLevel('Ukrainian', style: _languageStyle),
-                      LanguageLevel('Russian', style: _languageStyle),
-                      LanguageLevel('English', style: _languageStyle),
+                      LanguageLevel('Ukrainian', width: 150.0, percent: 1.0),
+                      LanguageLevel('Russian', width: 150.0, percent: 1.0),
+                      LanguageLevel('English', width: 150.0, percent: 0.8),
                     ],
                   ),
                 ),

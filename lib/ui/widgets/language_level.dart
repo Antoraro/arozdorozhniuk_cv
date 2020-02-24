@@ -1,19 +1,39 @@
 import 'package:arozd_cv/ui/constants/UISize.dart';
 import 'package:flutter/material.dart';
 
-class LanguageLevel extends StatelessWidget {
-  final GlobalKey _key = GlobalKey();
+class LanguageLevel extends StatefulWidget {
   final String text;
-  final TextStyle style;
   final double percent;
-  final double height;
+  final double strokeHeight;
+  final double width;
 
   LanguageLevel(
     this.text, {
-    this.style,
+    @required this.width,
     this.percent = 1.0,
-    this.height = 5.0,
+    this.strokeHeight = 5.0,
   });
+
+  @override
+  _LanguageLevelState createState() => _LanguageLevelState();
+}
+
+class _LanguageLevelState extends State<LanguageLevel>
+    with SingleTickerProviderStateMixin {
+  AnimationController _controller;
+  Animation _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+    _animation = CurveTween(curve: Curves.easeOutBack).animate(_controller)
+      ..addListener(() {
+        setState(() {});
+      });
+    _controller.forward();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,28 +41,27 @@ class LanguageLevel extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          text,
-          style: style,
+          widget.text,
+          style: Theme.of(context).textTheme.subtitle1.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
         ),
-        SizedBox(height: UISize.pSmall),
-        SizedBox(
-          height: height,
-          child: AnimatedContainer(
-            key: _key,
-            width: _getWidth(),
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(UISize.circleRadius),
-            ),
-            duration: Duration(milliseconds: 300),
+        SizedBox(height: 5.0),
+        Container(
+          height: widget.strokeHeight,
+          width: widget.width * _animation.value * widget.percent,
+          decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(UISize.circleRadius),
           ),
         ),
       ],
     );
   }
 
-  double _getWidth() {
-    final RenderBox renderBox = _key.currentContext.findRenderObject();
-    return renderBox.size.width * percent;
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }
