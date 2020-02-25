@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: AppColors.primary,
         brightness: Brightness.light,
+        dividerColor: Colors.transparent,
         textTheme:
             Theme.of(context).textTheme.apply(fontFamily: 'San Francisco'),
       ),

@@ -1,26 +1,21 @@
 import 'package:arozd_cv/ui/constants/my_info.dart';
-import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/widgets/base_list_tile.dart';
 import 'package:flutter/material.dart';
 
-class EducationList extends StatelessWidget {
+class EmploymentList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         Text(
-          'EDUCATION',
+          'EMPLOYMENT',
           style: Theme.of(context).textTheme.headline6.copyWith(
                 color: Colors.black,
               ),
         ),
         Column(
-          children: MyInfo.educationList
-              .map((e) => Padding(
-                  padding: EdgeInsets.only(top: UISize.pSmall),
-                  child: BaseListTile(e)))
-              .toList(),
+          children: MyInfo.employments.map((e) => BaseListTile(e)).toList(),
         ),
       ],
     );

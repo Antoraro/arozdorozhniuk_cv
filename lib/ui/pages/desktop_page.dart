@@ -1,6 +1,7 @@
 import 'package:arozd_cv/ui/constants/app_colors.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/views/education/education_list.dart';
+import 'package:arozd_cv/ui/views/employment/employment_list.dart';
 import 'package:arozd_cv/ui/views/info/info_avatar_view.dart';
 import 'package:arozd_cv/ui/views/info/info_contacts_view.dart';
 import 'package:arozd_cv/ui/views/info/info_links_view.dart';
@@ -23,7 +24,8 @@ class DesktopPage extends StatelessWidget {
             children: <Widget>[
               _buildHeaderView(),
               _buildSkillsView(),
-              _buildEducationView(context),
+              _buildEducationView(),
+              _buildEmploymentView(),
               SizedBox(height: UISize.pLarge),
             ],
           ),
@@ -78,10 +80,17 @@ class DesktopPage extends StatelessWidget {
     );
   }
 
-  Widget _buildEducationView(BuildContext context) {
+  Widget _buildEducationView() {
     return BaseCard(
       padding: UISize.pMedium,
       child: EducationList(),
+    );
+  }
+
+  Widget _buildEmploymentView() {
+    return BaseCard(
+      padding: UISize.pMedium,
+      child: EmploymentList(),
     );
   }
 }

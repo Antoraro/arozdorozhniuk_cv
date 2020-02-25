@@ -33,39 +33,114 @@ class MyInfo {
     'Android Developement',
     'Backend Developement',
   ];
-  static final List<Education> educationList = [
-    Education(
-      name: 'Vinnitsa Private Secondary School "AIST" (Stork)',
+  static final List<Employment> educationList = [
+    Employment(
+      title: 'Vinnitsa Private Secondary School "AIST" (Stork)',
       dateFrom: 'Sep 2001',
       dateTo: 'May 2012',
       place: 'Vinnytsia',
     ),
-    Education(
-      name: 'Bachelor of Engineering (B.Eng.), '
+    Employment(
+      title: 'Bachelor of Engineering (B.Eng.), '
           'Vinnytsia National Technical University',
       dateFrom: 'Sep 2012',
       dateTo: 'Jun 2016',
       place: 'Vinnytsia',
     ),
-    Education(
-      name: 'Master of Computer Applications (M.C.A.), '
+    Employment(
+      title: 'Master of Computer Applications (M.C.A.), '
           'Vinnytsia National Technical University',
       dateFrom: 'Sep 2016',
       dateTo: 'Jun 2018',
       place: 'Vinnytsia',
     ),
   ];
+  static final List<Employment> employments = [
+    Employment(
+      title: 'Junior Software Engineer, iKrok',
+      dateFrom: 'Jan 2014',
+      dateTo: 'Aug 2014',
+      place: 'Vinnytsia',
+      projects: [
+        Project(
+          name: 'Ride Genie (Taxi app)',
+          description: 'An application called to help user in taxi searching.',
+          responsibilities: [
+            'Android and iOS development',
+            'UI/UX implementation',
+            'Google Maps integration',
+            'Rest API integration',
+          ],
+        ),
+      ],
+    ),
+    Employment(
+      title: 'Software Engineer, Win Interactive',
+      dateFrom: 'Aug 2014',
+      dateTo: 'Jan 2018',
+      place: 'Vinnytsia',
+      projects: [
+        Project(
+          name: 'Poker Game App',
+          description: 'An poker game application called to provide '
+              'the best gaming experience for user.',
+          url: 'https://www.partypoker.com/en/p/mobile',
+          responsibilities: [
+            'Android and iOS development',
+            'UI/UX implementation',
+            'Rest API integration',
+            'Complex animations implementation',
+            'Build delivery',
+          ],
+        ),
+      ],
+    ),
+    Employment(
+      title: 'Software Engineer, OnSeo',
+      dateFrom: 'Jan 2018',
+      dateTo: 'Present',
+      place: 'Vinnytsia',
+      projects: [
+        Project(
+          name: 'Virgin Bet: Sports Betting on Football & Racing',
+          url: 'https://play.google.com/store/apps/details?id=com.'
+              'virginbet.virginbetuk&hl=ru',
+          responsibilities: [
+            'Android and iOS development',
+            'UI/UX implementation',
+            'Google Maps integration',
+            'Rest API integration',
+          ],
+        ),
+      ],
+    ),
+  ];
 }
 
-class Education {
-  final String name;
+class Employment {
+  final String title;
   final String dateFrom;
   final String dateTo;
   final String place;
-  const Education({
-    @required this.name,
+  final List<Project> projects;
+  const Employment({
+    @required this.title,
     @required this.dateFrom,
     @required this.dateTo,
     @required this.place,
+    this.projects,
+  });
+}
+
+class Project {
+  final String name;
+  final String description;
+  final String url;
+  final List<String> responsibilities;
+  const Project({
+    @required this.name,
+    this.description,
+    this.url,
+    @required this.responsibilities,
   });
 }
