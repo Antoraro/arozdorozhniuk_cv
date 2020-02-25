@@ -22,7 +22,7 @@ class DesktopPage extends StatelessWidget {
             children: <Widget>[
               _buildHeaderView(),
               _buildSkillsView(),
-              SizedBox(height: UISize.pMedium),
+              SizedBox(height: UISize.pLarge),
             ],
           ),
         ),
@@ -32,7 +32,7 @@ class DesktopPage extends StatelessWidget {
 
   Widget _buildHeaderView() {
     return BaseCard(
-      height: UISize.headerHeight,
+      height: UISize.headerHeightDesktop,
       color: AppColors.primary,
       shadowColor: AppColors.primary,
       padding: UISize.pMedium,
@@ -58,7 +58,7 @@ class DesktopPage extends StatelessWidget {
 
   Widget _buildSkillsView() {
     return BaseCard(
-      height: UISize.headerHeight,
+      height: UISize.skillsHeightDesktop,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,

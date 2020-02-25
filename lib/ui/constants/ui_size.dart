@@ -9,7 +9,7 @@ class UISize {
   static const double circleRadius = 90.0;
 
   // header view sizes
-  static const double headerHeight = 160.0;
+  static const double headerHeightDesktop = 160.0;
   static const double avatarSizeDesktop = 100.0;
   static const double avatarSizeMobile = 60.0;
   static const double linkButtonSize = 40.0;

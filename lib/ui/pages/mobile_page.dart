@@ -21,6 +21,7 @@ class MobilePage extends StatelessWidget {
           children: <Widget>[
             _buildHeaderView(),
             _buildSkillsView(),
+            SizedBox(height: UISize.pLarge),
           ],
         ),
       ),
@@ -53,13 +54,14 @@ class MobilePage extends StatelessWidget {
 
   Widget _buildSkillsView() {
     return BaseCard(
+      height: UISize.skillsHeightMobile,
       padding: UISize.pMedium,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          SkillsLanguagesView(),
+          Expanded(flex: 1, child: SkillsLanguagesView()),
           SizedBox(height: UISize.pMedium),
-          SkillsMineView(),
+          Expanded(flex: 1, child: SkillsMineView()),
         ],
       ),
     );
