@@ -1,4 +1,5 @@
-import 'package:arozd_cv/ui/constants/UISize.dart';
+import 'package:arozd_cv/ui/constants/app_colors.dart';
+import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/views/info_avatar_view.dart';
 import 'package:arozd_cv/ui/views/info_contacts_view.dart';
 import 'package:arozd_cv/ui/views/info_links_view.dart';
@@ -68,7 +69,7 @@ class DesktopPage extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(UISize.pLarge),
         ),
-        shadowColor: Colors.grey,
+        shadowColor: AppColors.secondary,
         elevation: UISize.cardElevation,
         child: Padding(
           padding: EdgeInsets.all(UISize.pSmall),

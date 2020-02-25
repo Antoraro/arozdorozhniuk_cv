@@ -1,3 +1,4 @@
+import 'package:arozd_cv/ui/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -9,7 +10,7 @@ class LayoutTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizeInfo) => Scaffold(
-        backgroundColor: Colors.grey.withOpacity(0.2),
+        backgroundColor: AppColors.background,
         body: _buildBody(screenType: sizeInfo.deviceScreenType),
       ),
     );

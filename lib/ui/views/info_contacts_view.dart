@@ -1,4 +1,6 @@
-import 'package:arozd_cv/ui/constants/UISize.dart';
+import 'package:arozd_cv/ui/constants/app_colors.dart';
+import 'package:arozd_cv/ui/constants/my_info.dart';
+import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,17 +11,17 @@ class InfoContactsView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
         Text(
-          '+380936031715',
+          MyInfo.phone,
           style: Theme.of(context).textTheme.caption.copyWith(
-                color: Colors.white,
+                color: AppColors.accent,
                 fontWeight: FontWeight.w100,
               ),
         ),
         SizedBox(height: UISize.pSmall),
         Text(
-          'anton.rozdorozhniuk@gmail.com',
+          MyInfo.mail,
           style: Theme.of(context).textTheme.caption.copyWith(
-                color: Colors.white,
+                color: AppColors.accent,
                 fontWeight: FontWeight.w100,
               ),
         ),

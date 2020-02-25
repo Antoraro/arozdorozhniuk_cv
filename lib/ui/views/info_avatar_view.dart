@@ -1,5 +1,5 @@
 import 'package:arozd_cv/r.dart';
-import 'package:arozd_cv/ui/constants/UISize.dart';
+import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

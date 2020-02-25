@@ -1,4 +1,5 @@
-import 'package:arozd_cv/ui/constants/UISize.dart';
+import 'package:arozd_cv/ui/constants/my_info.dart';
+import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/widgets/language_level.dart';
 import 'package:flutter/material.dart';
 
@@ -10,11 +11,9 @@ class SkillsLanguagesView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          LanguageLevel('Ukrainian', width: 150.0, percent: 1.0),
-          LanguageLevel('Russian', width: 150.0, percent: 1.0),
-          LanguageLevel('English', width: 150.0, percent: 0.8),
-        ],
+        children: MyInfo.languages.entries
+            .map((entry) => LanguageLevel(entry.key, percent: entry.value))
+            .toList(),
       ),
     );
   }

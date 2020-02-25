@@ -28,7 +28,9 @@ flutter:
   assets:
     # assets-generator-begin
     # assets/img/*
+    - assets/img/facebook.png
     - assets/img/github.png
+    - assets/img/linkedin.png
     - assets/img/profile_pic.jpg
     # assets-generator-end
 

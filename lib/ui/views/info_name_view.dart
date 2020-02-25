@@ -1,4 +1,6 @@
-import 'package:arozd_cv/ui/constants/UISize.dart';
+import 'package:arozd_cv/ui/constants/app_colors.dart';
+import 'package:arozd_cv/ui/constants/my_info.dart';
+import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,17 +12,17 @@ class InfoNameView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
-          'Anton Rozdorozhniuk',
+          MyInfo.name,
           softWrap: true,
           style: Theme.of(context).textTheme.headline4.copyWith(
-                color: Colors.white,
+                color: AppColors.accent,
               ),
         ),
         SizedBox(height: UISize.pSmall),
         Text(
-          'Software Engineer',
+          MyInfo.position,
           style: Theme.of(context).textTheme.subtitle2.copyWith(
-                color: Colors.white,
+                color: AppColors.accent,
               ),
         ),
       ],

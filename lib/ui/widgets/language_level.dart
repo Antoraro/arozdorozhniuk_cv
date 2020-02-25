@@ -1,4 +1,5 @@
-import 'package:arozd_cv/ui/constants/UISize.dart';
+import 'package:arozd_cv/ui/constants/app_colors.dart';
+import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/material.dart';
 
 class LanguageLevel extends StatefulWidget {
@@ -9,7 +10,7 @@ class LanguageLevel extends StatefulWidget {
 
   LanguageLevel(
     this.text, {
-    @required this.width,
+    this.width = UISize.languageLevelWidth,
     this.percent = 1.0,
     this.strokeHeight = 5.0,
   });
@@ -51,7 +52,7 @@ class _LanguageLevelState extends State<LanguageLevel>
           height: widget.strokeHeight,
           width: widget.width * _animation.value * widget.percent,
           decoration: BoxDecoration(
-            color: Colors.blue,
+            color: AppColors.primary,
             borderRadius: BorderRadius.circular(UISize.circleRadius),
           ),
         ),

@@ -9,4 +9,5 @@ class UISize {
   static const double cardElevation = 8.0;
   static const double circleRadius = 90.0;
   static const double linkButtonSize = 40.0;
+  static const double languageLevelWidth = 150.0;
 }
