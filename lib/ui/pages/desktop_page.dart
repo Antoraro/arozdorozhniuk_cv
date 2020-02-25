@@ -1,11 +1,12 @@
 import 'package:arozd_cv/ui/constants/app_colors.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
-import 'package:arozd_cv/ui/views/info_avatar_view.dart';
-import 'package:arozd_cv/ui/views/info_contacts_view.dart';
-import 'package:arozd_cv/ui/views/info_links_view.dart';
-import 'package:arozd_cv/ui/views/info_name_view.dart';
-import 'package:arozd_cv/ui/views/skills_languages_view.dart';
-import 'package:arozd_cv/ui/views/skills_mine_view.dart';
+import 'package:arozd_cv/ui/views/education/education_list.dart';
+import 'package:arozd_cv/ui/views/info/info_avatar_view.dart';
+import 'package:arozd_cv/ui/views/info/info_contacts_view.dart';
+import 'package:arozd_cv/ui/views/info/info_links_view.dart';
+import 'package:arozd_cv/ui/views/info/info_name_view.dart';
+import 'package:arozd_cv/ui/views/skills/skills_languages_view.dart';
+import 'package:arozd_cv/ui/views/skills/skills_mine_view.dart';
 import 'package:arozd_cv/ui/widgets/base_card.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,7 @@ class DesktopPage extends StatelessWidget {
             children: <Widget>[
               _buildHeaderView(),
               _buildSkillsView(),
+              _buildEducationView(context),
               SizedBox(height: UISize.pLarge),
             ],
           ),
@@ -73,6 +75,13 @@ class DesktopPage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildEducationView(BuildContext context) {
+    return BaseCard(
+      padding: UISize.pMedium,
+      child: EducationList(),
     );
   }
 }

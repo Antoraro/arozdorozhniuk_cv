@@ -1,4 +1,5 @@
 import 'package:arozd_cv/r.dart';
+import 'package:flutter/cupertino.dart';
 
 class MyInfo {
   static final String title = 'Anton Rozdorozhniuk CV';
@@ -32,4 +33,39 @@ class MyInfo {
     'Android Developement',
     'Backend Developement',
   ];
+  static final List<Education> educationList = [
+    Education(
+      name: 'Vinnitsa Private Secondary School "AIST" (Stork)',
+      dateFrom: 'Sep 2001',
+      dateTo: 'May 2012',
+      place: 'Vinnytsia',
+    ),
+    Education(
+      name: 'Bachelor of Engineering (B.Eng.), '
+          'Vinnytsia National Technical University',
+      dateFrom: 'Sep 2012',
+      dateTo: 'Jun 2016',
+      place: 'Vinnytsia',
+    ),
+    Education(
+      name: 'Master of Computer Applications (M.C.A.), '
+          'Vinnytsia National Technical University',
+      dateFrom: 'Sep 2016',
+      dateTo: 'Jun 2018',
+      place: 'Vinnytsia',
+    ),
+  ];
+}
+
+class Education {
+  final String name;
+  final String dateFrom;
+  final String dateTo;
+  final String place;
+  const Education({
+    @required this.name,
+    @required this.dateFrom,
+    @required this.dateTo,
+    @required this.place,
+  });
 }
