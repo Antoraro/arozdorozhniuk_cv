@@ -10,7 +10,7 @@ class LanguageLevel extends StatefulWidget {
 
   LanguageLevel(
     this.text, {
-    this.width = UISize.languageLevelWidth,
+    this.width = UISize.langLevelWidthDesktop,
     this.percent = 1.0,
     this.strokeHeight = 5.0,
   });

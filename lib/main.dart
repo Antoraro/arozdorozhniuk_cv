@@ -23,7 +23,10 @@ class MyApp extends StatelessWidget {
         textTheme:
             Theme.of(context).textTheme.apply(fontFamily: 'San Francisco'),
       ),
-      home: LayoutTemplate(),
+      home: Scaffold(
+        backgroundColor: AppColors.secondary.withOpacity(0.2),
+        body: LayoutTemplate(),
+      ),
     );
   }
 }

@@ -3,6 +3,7 @@ import 'package:arozd_cv/ui/constants/my_info.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class InfoContactsView extends StatelessWidget {
   @override
@@ -10,20 +11,26 @@ class InfoContactsView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
-        Text(
-          MyInfo.phone,
-          style: Theme.of(context).textTheme.caption.copyWith(
-                color: AppColors.accent,
-                fontWeight: FontWeight.w100,
-              ),
+        GestureDetector(
+          onTap: () => launch('tel:${MyInfo.phone}'),
+          child: Text(
+            MyInfo.phone,
+            style: Theme.of(context).textTheme.caption.copyWith(
+                  color: AppColors.accent,
+                  fontWeight: FontWeight.w100,
+                ),
+          ),
         ),
         SizedBox(height: UISize.pSmall),
-        Text(
-          MyInfo.mail,
-          style: Theme.of(context).textTheme.caption.copyWith(
-                color: AppColors.accent,
-                fontWeight: FontWeight.w100,
-              ),
+        GestureDetector(
+          onTap: () => launch('mailto:${MyInfo.mail}'),
+          child: Text(
+            MyInfo.mail,
+            style: Theme.of(context).textTheme.caption.copyWith(
+                  color: AppColors.accent,
+                  fontWeight: FontWeight.w100,
+                ),
+          ),
         ),
       ],
     );

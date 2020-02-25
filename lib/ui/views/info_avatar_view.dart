@@ -4,14 +4,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class InfoAvatarView extends StatelessWidget {
+  final double size;
+
+  const InfoAvatarView({this.size = UISize.avatarSizeDesktop});
+
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: UISize.cardElevation,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(UISize.circleRadius),
+    return SizedBox(
+      height: size,
+      width: size,
+      child: Card(
+        elevation: UISize.cardElevation,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(UISize.circleRadius),
+        ),
+        child: Image.asset(R.assetsImgProfilePic, fit: BoxFit.fill),
       ),
-      child: Image.asset(R.assetsImgProfilePic, fit: BoxFit.fill),
     );
   }
 }

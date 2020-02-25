@@ -1,6 +1,7 @@
 import 'package:arozd_cv/ui/constants/my_info.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/widgets/skill_chip.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SkillsMineView extends StatelessWidget {
