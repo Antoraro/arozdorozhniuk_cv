@@ -1,8 +1,8 @@
+import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/material.dart';
 
 class TranslateOnHover extends StatefulWidget {
   final Widget child;
-  // You can also pass the translation in here if you want to
   TranslateOnHover({Key key, this.child}) : super(key: key);
 
   @override
@@ -21,7 +21,7 @@ class _TranslateOnHoverState extends State<TranslateOnHover> {
       onEnter: (e) => _mouseEnter(true),
       onExit: (e) => _mouseEnter(false),
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: UISize.animationDuration),
         child: widget.child,
         transform: _hovering ? hoverTransform : nonHoverTransform,
       ),

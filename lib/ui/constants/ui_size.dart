@@ -7,6 +7,7 @@ class UISize {
   static const double mainPadding = 16.0;
   static const double cardElevation = 5.0;
   static const double circleRadius = 90.0;
+  static const int animationDuration = 300;
 
   // header view sizes
   static const double headerHeightDesktop = 160.0;
@@ -16,6 +17,4 @@ class UISize {
 
   // skill view sizes
   static const double skillsHeightDesktop = 160.0;
-  static const double langLevelWidthDesktop = 150.0;
-  static const double langLevelWidthMobile = 220.0;
 }

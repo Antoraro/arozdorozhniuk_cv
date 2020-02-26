@@ -60,9 +60,9 @@ class MobilePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Expanded(flex: 1, child: SkillsLanguagesView()),
+          SkillsLanguagesView(),
           SizedBox(height: UISize.pMedium),
-          Expanded(flex: 1, child: SkillsMineView()),
+          SkillsMineView(),
         ],
       ),
     );

@@ -9,18 +9,18 @@ class EducationList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        Text(
-          'EDUCATION',
-          style: Theme.of(context).textTheme.headline6.copyWith(
-                color: Colors.black,
-              ),
+        Padding(
+          padding: EdgeInsets.only(top: UISize.pSmall),
+          child: Text(
+            'EDUCATION',
+            style: Theme.of(context).textTheme.headline6.copyWith(
+                  color: Colors.black,
+                  letterSpacing: 1.0,
+                ),
+          ),
         ),
         Column(
-          children: MyInfo.educationList
-              .map((e) => Padding(
-                  padding: EdgeInsets.only(top: UISize.pSmall),
-                  child: BaseListTile(e)))
-              .toList(),
+          children: MyInfo.educationList.map((e) => BaseListTile(e)).toList(),
         ),
       ],
     );

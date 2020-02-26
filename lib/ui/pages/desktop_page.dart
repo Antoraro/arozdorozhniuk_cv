@@ -72,7 +72,10 @@ class DesktopPage extends StatelessWidget {
           ),
           Expanded(
             flex: 4,
-            child: SkillsMineView(),
+            child: Padding(
+              padding: EdgeInsets.only(left: UISize.pMedium),
+              child: SkillsMineView(),
+            ),
           ),
         ],
       ),

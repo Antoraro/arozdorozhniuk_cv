@@ -10,15 +10,9 @@ class InfoAvatarView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: size,
-      width: size,
-      child: Card(
-        shadowColor: Colors.blueGrey,
-        elevation: UISize.cardElevation,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(UISize.circleRadius),
-        ),
+    return CircleAvatar(
+      radius: size / 2,
+      child: ClipOval(
         child: Image.asset(R.assetsImgProfilePic, fit: BoxFit.fill),
       ),
     );
