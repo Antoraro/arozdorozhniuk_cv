@@ -20,8 +20,9 @@ class EmploymentList extends StatelessWidget {
           ),
         ),
         Column(
-          children:
-              MyInfo.employments.map((e) => EmploymentListTile(e)).toList(),
+          children: MyInfo.employments.reversed
+              .map((e) => EmploymentListTile(e))
+              .toList(),
         ),
       ],
     );

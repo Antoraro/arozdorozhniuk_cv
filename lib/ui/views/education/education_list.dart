@@ -19,7 +19,9 @@ class EducationList extends StatelessWidget {
           ),
         ),
         Column(
-          children: MyInfo.educationList.map((e) => BaseListTile(e)).toList(),
+          children: MyInfo.educationList.reversed
+              .map((e) => BaseListTile(e))
+              .toList(),
         ),
       ],
     );
