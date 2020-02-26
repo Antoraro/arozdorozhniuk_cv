@@ -45,7 +45,7 @@ class MyInfo {
       'and debugging processes. I have great expertise in design, '
       'deploying, testing and maintenance of mobile applications and '
       'web systems. Equipped with a diverse and promising skill-set. '
-      '\n\nI\'m projcient in an assortment of technologies, including Java, '
+      '\n\nI\'m froficient in an assortment of technologies, including Java, '
       'Spring, kotiln and Flutter. Able to effectively self-manage during '
       'independent projects, as well as collaborate in a team setting.';
   static final List<Employment> educationList = [
