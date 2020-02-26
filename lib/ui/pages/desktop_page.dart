@@ -37,11 +37,11 @@ class DesktopPage extends StatelessWidget {
   Widget _buildHeaderView() {
     return BaseCard(
       height: UISize.headerHeightDesktop,
-      color: AppColors.primary,
       shadowColor: AppColors.primary,
-      padding: UISize.pMedium,
+      color: AppColors.primary,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           InfoAvatarView(),
           SizedBox(width: UISize.pMedium),
@@ -62,7 +62,6 @@ class DesktopPage extends StatelessWidget {
 
   Widget _buildSkillsView() {
     return BaseCard(
-      height: UISize.skillsHeightDesktop,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
@@ -82,14 +81,12 @@ class DesktopPage extends StatelessWidget {
 
   Widget _buildEducationView() {
     return BaseCard(
-      padding: UISize.pMedium,
       child: EducationList(),
     );
   }
 
   Widget _buildEmploymentView() {
     return BaseCard(
-      padding: UISize.pMedium,
       child: EmploymentList(),
     );
   }

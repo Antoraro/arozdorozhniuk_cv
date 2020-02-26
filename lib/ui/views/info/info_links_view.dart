@@ -28,6 +28,7 @@ class InfoLinksView extends StatelessWidget {
       width: UISize.linkButtonSize,
       child: Card(
         color: AppColors.primary,
+        shadowColor: Colors.blueGrey,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(UISize.circleRadius),
         ),

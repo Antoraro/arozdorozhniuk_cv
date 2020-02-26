@@ -9,19 +9,22 @@ class SkillsLanguagesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizeInfo) {
-        return Padding(
-          padding: EdgeInsets.all(UISize.pSmall),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: MyInfo.languages.entries
-                .map((entry) => LanguageLevel(
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: MyInfo.languages.entries
+              .map((entry) => Padding(
+                    padding: EdgeInsets.only(
+                      bottom: UISize.pSmall,
+                      right: UISize.pLarge,
+                    ),
+                    child: LanguageLevel(
                       entry.key,
                       percent: entry.value,
                       width: _getLevelWidth(sizeInfo.deviceScreenType),
-                    ))
-                .toList(),
-          ),
+                    ),
+                  ))
+              .toList(),
         );
       },
     );

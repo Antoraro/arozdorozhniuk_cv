@@ -15,11 +15,11 @@ class BaseCard extends StatelessWidget {
   const BaseCard({
     this.width,
     this.height,
-    this.padding = UISize.pSmall,
+    this.padding = UISize.pMedium,
     this.borderRadius = UISize.pLarge,
     this.elevation = UISize.cardElevation,
     this.color = AppColors.accent,
-    this.shadowColor = AppColors.secondary,
+    this.shadowColor = AppColors.shadow,
     @required this.child,
   });
 

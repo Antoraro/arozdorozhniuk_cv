@@ -1,6 +1,7 @@
 import 'package:arozd_cv/ui/constants/my_info.dart';
-import 'package:arozd_cv/ui/widgets/base_list_tile.dart';
 import 'package:flutter/material.dart';
+
+import 'employment_list_tile.dart';
 
 class EmploymentList extends StatelessWidget {
   @override
@@ -15,7 +16,8 @@ class EmploymentList extends StatelessWidget {
               ),
         ),
         Column(
-          children: MyInfo.employments.map((e) => BaseListTile(e)).toList(),
+          children:
+              MyInfo.employments.map((e) => EmploymentListTile(e)).toList(),
         ),
       ],
     );

@@ -16,7 +16,6 @@ class UISize {
 
   // skill view sizes
   static const double skillsHeightDesktop = 160.0;
-  static const double skillsHeightMobile = 350.0;
   static const double langLevelWidthDesktop = 150.0;
   static const double langLevelWidthMobile = 220.0;
 }

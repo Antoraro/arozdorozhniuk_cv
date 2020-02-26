@@ -21,19 +21,26 @@ class LanguageLevel extends StatefulWidget {
 
 class _LanguageLevelState extends State<LanguageLevel>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation _animation;
+  double _progress = 0.0;
+  Animation<double> animation;
 
   @override
   void initState() {
     super.initState();
-    _controller =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
-    _animation = CurveTween(curve: Curves.easeOutBack).animate(_controller)
-      ..addListener(() {
-        setState(() {});
+    var controller = AnimationController(
+      duration: Duration(milliseconds: 300),
+      vsync: this,
+    );
+    animation = Tween(begin: 0.0, end: widget.percent).animate(
+      CurvedAnimation(parent: controller, curve: Curves.easeInOut),
+    )..addListener(() {
+        setState(() {
+          _progress = animation.value;
+        });
       });
-    _controller.forward();
+    Future.delayed(const Duration(milliseconds: 300), () {
+      controller.forward();
+    });
   }
 
   @override
@@ -48,21 +55,52 @@ class _LanguageLevelState extends State<LanguageLevel>
               ),
         ),
         SizedBox(height: 5.0),
-        Container(
-          height: widget.strokeHeight,
-          width: widget.width * _animation.value * widget.percent,
-          decoration: BoxDecoration(
-            color: AppColors.primary,
-            borderRadius: BorderRadius.circular(UISize.circleRadius),
+        SizedBox(
+          width: widget.width,
+          child: CustomPaint(
+            painter: LinePainter(
+              _progress,
+              widget.strokeHeight,
+            ),
           ),
         ),
       ],
     );
   }
+}
+
+class LinePainter extends CustomPainter {
+  Paint _paintBkgLine;
+  Paint _paintFrontLine;
+  double _progress;
+
+  LinePainter(this._progress, height) {
+    _paintBkgLine = Paint()
+      ..color = AppColors.shadow.withOpacity(0.4)
+      ..strokeWidth = height
+      ..strokeCap = StrokeCap.round;
+    _paintFrontLine = Paint()
+      ..color = AppColors.primary
+      ..strokeWidth = height
+      ..strokeCap = StrokeCap.round;
+  }
 
   @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
+  void paint(Canvas canvas, Size size) {
+    canvas.drawLine(
+      Offset(0.0, 0.0),
+      Offset(size.width, size.height),
+      _paintBkgLine,
+    );
+    canvas.drawLine(
+      Offset(0.0, 0.0),
+      Offset(size.width * _progress, size.height),
+      _paintFrontLine,
+    );
+  }
+
+  @override
+  bool shouldRepaint(LinePainter oldDelegate) {
+    return oldDelegate._progress != _progress;
   }
 }

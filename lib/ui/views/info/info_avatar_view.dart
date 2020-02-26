@@ -14,6 +14,7 @@ class InfoAvatarView extends StatelessWidget {
       height: size,
       width: size,
       child: Card(
+        shadowColor: Colors.blueGrey,
         elevation: UISize.cardElevation,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(UISize.circleRadius),

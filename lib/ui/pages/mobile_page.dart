@@ -36,7 +36,6 @@ class MobilePage extends StatelessWidget {
     return BaseCard(
       color: AppColors.primary,
       shadowColor: AppColors.primary,
-      padding: UISize.pMedium,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -58,8 +57,6 @@ class MobilePage extends StatelessWidget {
 
   Widget _buildSkillsView() {
     return BaseCard(
-      height: UISize.skillsHeightMobile,
-      padding: UISize.pMedium,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -73,14 +70,12 @@ class MobilePage extends StatelessWidget {
 
   Widget _buildEducationView() {
     return BaseCard(
-      padding: UISize.pMedium,
       child: EducationList(),
     );
   }
 
   Widget _buildEmploymentView() {
     return BaseCard(
-      padding: UISize.pMedium,
       child: EmploymentList(),
     );
   }

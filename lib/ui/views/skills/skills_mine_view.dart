@@ -7,13 +7,11 @@ import 'package:flutter/material.dart';
 class SkillsMineView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Wrap(
-        spacing: UISize.pSmall,
-        alignment: WrapAlignment.start,
-        textDirection: TextDirection.ltr,
-        children: MyInfo.skills.map((s) => SkillChip(s)).toList(),
-      ),
+    return Wrap(
+      spacing: UISize.pSmall,
+      alignment: WrapAlignment.start,
+      textDirection: TextDirection.ltr,
+      children: MyInfo.skills.map((s) => SkillChip(s)).toList(),
     );
   }
 }
