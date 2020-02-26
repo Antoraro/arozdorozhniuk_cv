@@ -15,7 +15,6 @@ class EducationList extends StatelessWidget {
             'EDUCATION',
             style: Theme.of(context).textTheme.headline6.copyWith(
                   color: Colors.black,
-                  letterSpacing: 1.0,
                 ),
           ),
         ),

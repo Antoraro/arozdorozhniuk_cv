@@ -44,7 +44,7 @@ class InfoLinksView extends StatelessWidget {
           child: Container(
             constraints: BoxConstraints.expand(),
             alignment: Alignment.center,
-            child: Image.asset(assetPath, fit: BoxFit.fill),
+            child: Image.asset(assetPath, fit: BoxFit.fill, semanticLabel: url),
           ),
         ),
       ),
