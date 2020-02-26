@@ -33,6 +33,16 @@ class MyInfo {
     'Android Developement',
     'Backend Developement',
   ];
+  static final String profileText =
+      'I\'m experienced backend and mobile developer, '
+      'adept in all stages of advanced web and mobile development. '
+      'Knowledgeable in user interface, testing, and debugging processes. '
+      'I have great expertise in design, installation, '
+      'testing and maintenance of web systems. '
+      'Equipped with a diverse and promising skill-set. '
+      'Projcient in an assortment of technologies, including Java, Spring, '
+      'kotiln and Flutter. Able to effectively self-manage during '
+      'independent proVects, as well as collaborate in a team setting.';
   static final List<Employment> educationList = [
     Employment(
       title: 'Vinnitsa Private Secondary School "AIST" (Stork)',

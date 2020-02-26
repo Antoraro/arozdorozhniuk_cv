@@ -17,7 +17,7 @@ class LanguageLevel extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        Text(
+        SelectableText(
           text,
           style: Theme.of(context).textTheme.subtitle1.copyWith(
                 fontWeight: FontWeight.w600,

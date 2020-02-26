@@ -11,15 +11,14 @@ class InfoNameView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text(
+        SelectableText(
           MyInfo.name,
-          softWrap: true,
           style: Theme.of(context).textTheme.headline4.copyWith(
                 color: AppColors.accent,
               ),
         ),
         SizedBox(height: UISize.pSmall),
-        Text(
+        SelectableText(
           MyInfo.position,
           style: Theme.of(context).textTheme.subtitle2.copyWith(
                 color: AppColors.accent,

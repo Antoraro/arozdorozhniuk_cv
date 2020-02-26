@@ -18,8 +18,9 @@ class _EmploymentListTileState extends State<EmploymentListTile> {
     if (widget.data.projects == null || widget.data.projects.isEmpty)
       return BaseListTile(widget.data);
     return ExpansionTile(
-      title: Text(widget.data.title),
-      subtitle: Text('${widget.data.dateFrom} - ${widget.data.dateTo}'),
+      title: SelectableText(widget.data.title),
+      subtitle:
+          SelectableText('${widget.data.dateFrom} - ${widget.data.dateTo}'),
       trailing: Icon(_arrowIcon),
       onExpansionChanged: (expanded) {
         setState(() {
@@ -43,7 +44,7 @@ class _EmploymentListTileState extends State<EmploymentListTile> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text(
+          SelectableText(
             p.name,
             style: Theme.of(context).textTheme.subtitle2.copyWith(
                   fontWeight: FontWeight.w600,
@@ -51,7 +52,7 @@ class _EmploymentListTileState extends State<EmploymentListTile> {
           ),
           SizedBox(height: UISize.pSmall),
           p.description != null
-              ? Text(
+              ? SelectableText(
                   p.description,
                   style: Theme.of(context).textTheme.button,
                 )
@@ -68,14 +69,14 @@ class _EmploymentListTileState extends State<EmploymentListTile> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         SizedBox(height: UISize.pSmall),
-        Text(
+        SelectableText(
           'Responsibilities:',
           style: Theme.of(context).textTheme.bodyText2.copyWith(
                 decoration: TextDecoration.underline,
               ),
         ),
         SizedBox(height: UISize.pSmall / 2),
-        Text(
+        SelectableText(
           ' - ${project.responsibilities.join('\n - ')}',
           style: Theme.of(context).textTheme.button,
         ),

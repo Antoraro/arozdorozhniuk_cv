@@ -6,6 +6,7 @@ import 'package:arozd_cv/ui/views/info/info_avatar_view.dart';
 import 'package:arozd_cv/ui/views/info/info_contacts_view.dart';
 import 'package:arozd_cv/ui/views/info/info_links_view.dart';
 import 'package:arozd_cv/ui/views/info/info_name_view.dart';
+import 'package:arozd_cv/ui/views/profile/profile_view.dart';
 import 'package:arozd_cv/ui/views/skills/skills_languages_view.dart';
 import 'package:arozd_cv/ui/views/skills/skills_mine_view.dart';
 import 'package:arozd_cv/ui/widgets/base_card.dart';
@@ -24,6 +25,7 @@ class DesktopPage extends StatelessWidget {
             children: <Widget>[
               _buildHeaderView(),
               _buildSkillsView(),
+              _buildProfileView(),
               _buildEducationView(),
               _buildEmploymentView(),
               SizedBox(height: UISize.pLarge),
@@ -79,6 +81,12 @@ class DesktopPage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildProfileView() {
+    return BaseCard(
+      child: ProfileView(),
     );
   }
 

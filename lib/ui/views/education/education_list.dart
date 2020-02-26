@@ -11,7 +11,7 @@ class EducationList extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: EdgeInsets.only(top: UISize.pSmall),
-          child: Text(
+          child: SelectableText(
             'EDUCATION',
             style: Theme.of(context).textTheme.headline6.copyWith(
                   color: Colors.black,
