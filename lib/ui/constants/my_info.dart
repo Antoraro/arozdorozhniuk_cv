@@ -25,23 +25,28 @@ class MyInfo {
     'swift',
     'C#',
     'python',
+    'Xamarin',
+    'Spring',
     'Android SDK',
     'Flutter SDK',
-    'Spring',
-    'Xamarin',
+    'Design Patterns',
+    'Algorithms',
+    'Rx programming',
+    'Design',
+    'Analytical Skills',
     'iOS Developement',
     'Android Developement',
     'Backend Developement',
   ];
   static final String profileText =
-      'I\'m experienced backend and mobile developer, '
-      'adept in all stages of advanced web and mobile development. '
-      'Knowledgeable in user interface, testing, and debugging processes. '
-      'I have great expertise in design, deploying, '
-      'testing and maintenance of android systems. '
-      'Equipped with a diverse and promising skill-set. '
-      'Projcient in an assortment of technologies, including Java, Spring, '
-      'kotiln and Flutter. Able to effectively self-manage during '
+      'I\'m experienced mobile and backend developer, '
+      'adept in all stages of advanced web and mobile development.'
+      '\n\nI\'m knowledgeable in user interface, design, testing, '
+      'and debugging processes. I have great expertise in design, '
+      'deploying, testing and maintenance of mobile applications and '
+      'web systems. Equipped with a diverse and promising skill-set. '
+      '\n\nI\'m projcient in an assortment of technologies, including Java, '
+      'Spring, kotiln and Flutter. Able to effectively self-manage during '
       'independent projects, as well as collaborate in a team setting.';
   static final List<Employment> educationList = [
     Employment(
