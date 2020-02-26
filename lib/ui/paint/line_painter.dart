@@ -8,7 +8,7 @@ class LinePainter extends CustomPainter {
 
   LinePainter(this._progress, height) {
     _paintBkgLine = Paint()
-      ..color = AppColors.shadow.withOpacity(0.4)
+      ..color = AppColors.secondary.withOpacity(0.2)
       ..strokeWidth = height
       ..strokeCap = StrokeCap.round;
     _paintFrontLine = Paint()

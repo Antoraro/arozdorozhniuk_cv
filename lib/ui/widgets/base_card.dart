@@ -19,7 +19,7 @@ class BaseCard extends StatelessWidget {
     this.borderRadius = UISize.pLarge,
     this.elevation = UISize.cardElevation,
     this.color = AppColors.accent,
-    this.shadowColor = AppColors.shadow,
+    this.shadowColor,
     @required this.child,
   });
 
@@ -33,7 +33,7 @@ class BaseCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(borderRadius),
         ),
         color: color,
-        shadowColor: shadowColor,
+        shadowColor: shadowColor ?? AppColors.secondary.withOpacity(0.2),
         elevation: elevation,
         child: Padding(
           padding: EdgeInsets.all(padding),

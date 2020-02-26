@@ -16,6 +16,7 @@ class SkillChip extends StatelessWidget {
         name,
         style: Theme.of(context).textTheme.button.copyWith(
               color: AppColors.accent,
+              fontSize: 13.0,
             ),
       ),
     );

@@ -20,7 +20,9 @@ class EducationList extends StatelessWidget {
         ),
         Column(
           children: MyInfo.educationList.reversed
-              .map((e) => BaseListTile(e))
+              .map((e) => Padding(
+                  padding: EdgeInsets.only(top: UISize.pSmall),
+                  child: BaseListTile(e)))
               .toList(),
         ),
       ],

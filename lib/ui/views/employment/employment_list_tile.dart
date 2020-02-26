@@ -18,9 +18,8 @@ class _EmploymentListTileState extends State<EmploymentListTile> {
     if (widget.data.projects == null || widget.data.projects.isEmpty)
       return BaseListTile(widget.data);
     return ExpansionTile(
-      title: SelectableText(widget.data.title),
-      subtitle:
-          SelectableText('${widget.data.dateFrom} - ${widget.data.dateTo}'),
+      title: Text(widget.data.title),
+      subtitle: Text('${widget.data.dateFrom} - ${widget.data.dateTo}'),
       trailing: Icon(_arrowIcon),
       onExpansionChanged: (expanded) {
         setState(() {

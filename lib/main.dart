@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             Theme.of(context).textTheme.apply(fontFamily: 'San Francisco'),
       ),
       home: Scaffold(
-        backgroundColor: AppColors.secondary.withOpacity(0.2),
+        backgroundColor: Colors.white70,
         body: LayoutTemplate(),
       ),
     );
