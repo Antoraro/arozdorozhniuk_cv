@@ -1,10 +1,12 @@
+import 'package:arozd_cv/config/my_info.dart';
 import 'package:arozd_cv/ui/constants/app_colors.dart';
-import 'package:arozd_cv/ui/constants/my_info.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/extensions/hover_extensions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../locator.dart';
 
 class InfoLinksView extends StatelessWidget {
   @override
@@ -12,7 +14,9 @@ class InfoLinksView extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.end,
-      children: MyInfo.links.entries
+      children: locator<MyInfo>()
+          .links
+          .entries
           .map(
             (e) => _buildLinkButton(url: e.value, assetPath: e.key)
                 .showCursorOnHover

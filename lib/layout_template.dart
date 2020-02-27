@@ -1,3 +1,4 @@
+import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -9,8 +10,12 @@ class LayoutTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
-      builder: (context, sizeInfo) =>
-          _buildBody(screenType: sizeInfo.deviceScreenType),
+      builder: (context, sizeInfo) => Container(
+        alignment: Alignment.topCenter,
+        constraints: BoxConstraints.expand(),
+        padding: EdgeInsets.all(UISize.pSmall),
+        child: _buildBody(screenType: sizeInfo.deviceScreenType),
+      ),
     );
   }
 

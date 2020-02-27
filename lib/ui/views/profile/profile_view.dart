@@ -1,6 +1,8 @@
-import 'package:arozd_cv/ui/constants/my_info.dart';
+import 'package:arozd_cv/config/my_info.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/material.dart';
+
+import '../../../locator.dart';
 
 class ProfileView extends StatelessWidget {
   @override
@@ -20,7 +22,7 @@ class ProfileView extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(left: UISize.pMedium),
           child: SelectableText(
-            MyInfo.profileText,
+            locator<MyInfo>().profileText,
             style: Theme.of(context).textTheme.button,
           ),
         ),

@@ -1,7 +1,8 @@
-import 'package:arozd_cv/ui/constants/my_info.dart';
+import 'package:arozd_cv/config/my_info.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/material.dart';
 
+import '../../../locator.dart';
 import 'employment_list_tile.dart';
 
 class EmploymentList extends StatelessWidget {
@@ -20,7 +21,9 @@ class EmploymentList extends StatelessWidget {
           ),
         ),
         Column(
-          children: MyInfo.employments.reversed
+          children: locator<MyInfo>()
+              .employments
+              .reversed
               .map((e) => EmploymentListTile(e))
               .toList(),
         ),

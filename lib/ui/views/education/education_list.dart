@@ -1,4 +1,5 @@
-import 'package:arozd_cv/ui/constants/my_info.dart';
+import 'package:arozd_cv/config/my_info.dart';
+import 'package:arozd_cv/locator.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/widgets/base_list_tile.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,9 @@ class EducationList extends StatelessWidget {
           ),
         ),
         Column(
-          children: MyInfo.educationList.reversed
+          children: locator<MyInfo>()
+              .educationList
+              .reversed
               .map((e) => Padding(
                   padding: EdgeInsets.only(top: UISize.pSmall),
                   child: BaseListTile(e)))

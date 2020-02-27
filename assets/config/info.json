@@ -1,0 +1,117 @@
+{
+  "title": "Anton Rozdorozhniuk CV",
+  "phone": "+380936011715",
+  "mail": "anton.rozdorozhniuk@gmail.com",
+  "name": "Anton Rozdorozhniuk",
+  "position": "Experienced Mobile Developer",
+  "profileText": "I'm experienced mobile and backend developer, adept in all stages of advanced web and mobile development.\n\nI'm knowledgeable in user interface, design, testing, and debugging processes. I have great expertise in design, deploying, testing and maintenance of mobile applications and web systems. Equipped with a diverse and promising skill-set. \n\nI'm froficient in an assortment of technologies, including Java, Spring, kotiln and Flutter. Able to effectively self-manage during independent projects, as well as collaborate in a team setting.",
+  "links": {
+    "assets/img/linkedin.png": "https://www.linkedin.com/in/anton-rozdorozhniuk-b44969125/",
+    "assets/img/facebook.png": "https://www.facebook.com/anton.rozdorogniuk",
+    "assets/img/github.png": "https://github.com/Antoraro"
+  },
+  "languages": {
+    "Ukrainian": 1.0,
+    "Russian": 1.0,
+    "English": 0.8
+  },
+  "skillList": [
+    "Java",
+    "dart",
+    "kotlin",
+    "swift",
+    "C#",
+    "python",
+    "Xamarin",
+    "Spring",
+    "Android SDK",
+    "Flutter SDK",
+    "Design Patterns",
+    "Algorithms",
+    "Rx programming",
+    "Design",
+    "Analytical Skills",
+    "iOS Development",
+    "Android Development",
+    "Backend Development"
+  ],
+  "educationList": [
+    {
+      "title": "Vinnytsia Private Secondary School \"AIST\" (Stork)",
+      "dateFrom": "Sep 2001",
+      "dateTo": "Sep 2012",
+      "place": "Vinnytsia"
+    },
+    {
+      "title": "Bachelor of Engineering (B.Eng.), Vinnytsia National Technical University",
+      "dateFrom": "Sep 2012",
+      "dateTo": "Jun 2016",
+      "place": "Vinnytsia"
+    },
+    {
+      "title": "Master of Computer Applications (M.C.A.), Vinnytsia National Technical University",
+      "dateFrom": "Sep 2016",
+      "dateTo": "Sep 2018",
+      "place": "Vinnytsia"
+    }
+  ],
+  "employments": [
+    {
+      "title": "Junior Software Engineer, iKrok",
+      "dateFrom": "Jan 2014",
+      "dateTo": "Aug 2014",
+      "place": "Vinnytsia",
+      "projects": [
+        {
+          "name": "Ride Genie (Taxi app)",
+          "description": "Ride Genie is the Easiest, Most Convenient Way To Get a Ride in Las Vegas. Simply Choose Your Ride Between Cabs or Black Cars. Like UBER, but Better!",
+          "responsibilities": [
+            "Android and iOS development",
+            "UI/UX implementation",
+            "Google Maps integration",
+            "Rest API integration"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Software Engineer, Win Interactive",
+      "dateFrom": "Aug 2014",
+      "dateTo": "Jan 2018",
+      "place": "Vinnytsia",
+      "projects": [
+        {
+          "name": "\"PartyPoker\" Game App",
+          "url": "https://www.partypoker.com/en/p/mobile",
+          "description": "PartyPoker is an online poker card room. Launched in 2001 by PartyGaming, the site has had up to 80,000 players logged-in and was the largest online card room until 2006.",
+          "responsibilities": [
+            "Android and iOS development",
+            "UI/UX implementation",
+            "Rest API integration",
+            "Complex animations implementation",
+            "Build delivery"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Software Engineer, OnSeo",
+      "dateFrom": "Jan 2018",
+      "dateTo": "Present",
+      "place": "Vinnytsia",
+      "projects": [
+        {
+          "name": "Virgin Bet: Sports Betting on Football & Racing",
+          "url": "https://play.google.com/store/apps/details?id=com.virginbet.virginbetuk&hl=ru",
+          "description": "Virgin Bet is a brand new sportsbook launched by Gamseys and powered by the popular SBTech gaming platform software providers.",
+          "responsibilities": [
+            "Android development",
+            "UI/UX implementation",
+            "Rest API and Sockets integration",
+            "Project architecture development"
+          ]
+        }
+      ]
+    }
+  ]
+}

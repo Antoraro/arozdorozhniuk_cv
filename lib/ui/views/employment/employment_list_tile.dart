@@ -1,4 +1,4 @@
-import 'package:arozd_cv/ui/constants/my_info.dart';
+import 'package:arozd_cv/config/my_info.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/widgets/base_list_tile.dart';
 import 'package:flutter/cupertino.dart';

@@ -1,4 +1,4 @@
-import 'package:arozd_cv/ui/constants/my_info.dart';
+import 'package:arozd_cv/config/my_info.dart';
 import 'package:flutter/material.dart';
 
 class BaseListTile extends StatelessWidget {

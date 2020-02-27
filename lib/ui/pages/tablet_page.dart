@@ -15,24 +15,16 @@ import 'package:flutter/material.dart';
 class TabletPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.topCenter,
-      child: Container(
-        constraints: BoxConstraints(maxWidth: UISize.maxWidth),
-        child: SingleChildScrollView(
-          padding: EdgeInsets.all(UISize.pLarge),
-          child: Column(
-            children: <Widget>[
-              _buildHeaderView(),
-              _buildSkillsView(),
-              _buildProfileView(),
-              _buildEducationView(),
-              _buildEmploymentView(),
-              SizedBox(height: UISize.pLarge),
-            ],
-          ),
-        ),
-      ),
+    return ListView(
+      shrinkWrap: true,
+      children: <Widget>[
+        _buildHeaderView(),
+        _buildSkillsView(),
+        _buildProfileView(),
+        _buildEducationView(),
+        _buildEmploymentView(),
+        SizedBox(height: UISize.pLarge),
+      ],
     );
   }
 
