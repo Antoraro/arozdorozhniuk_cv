@@ -16,6 +16,7 @@ class TabletPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      padding: EdgeInsets.all(UISize.pSmall),
       shrinkWrap: true,
       children: <Widget>[
         _buildHeaderView(),

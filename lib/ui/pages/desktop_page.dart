@@ -18,6 +18,7 @@ class DesktopPage extends StatelessWidget {
     return Container(
       constraints: BoxConstraints(maxWidth: UISize.maxWidth),
       child: ListView(
+        padding: EdgeInsets.all(UISize.pSmall),
         shrinkWrap: true,
         children: <Widget>[
           _buildHeaderView(),
