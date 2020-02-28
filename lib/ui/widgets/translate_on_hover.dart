@@ -21,6 +21,7 @@ class _TranslateOnHoverState extends State<TranslateOnHover> {
       onEnter: (e) => _mouseEnter(true),
       onExit: (e) => _mouseEnter(false),
       child: AnimatedContainer(
+        curve: Curves.easeIn,
         duration: const Duration(milliseconds: UISize.animationDuration),
         child: widget.child,
         transform: _hovering ? hoverTransform : nonHoverTransform,

@@ -16,7 +16,7 @@ class InfoContactsView extends StatelessWidget {
       children: <Widget>[
         GestureDetector(
           onTap: () => launch('tel:${info.phone}'),
-          child: SelectableText(
+          child: Text(
             info.phone,
             style: Theme.of(context).textTheme.caption.copyWith(
                   color: AppColors.accent,
@@ -27,7 +27,7 @@ class InfoContactsView extends StatelessWidget {
         SizedBox(height: UISize.pSmall),
         GestureDetector(
           onTap: () => launch('mailto:${info.mail}'),
-          child: SelectableText(
+          child: Text(
             info.mail,
             style: Theme.of(context).textTheme.caption.copyWith(
                   color: AppColors.accent,

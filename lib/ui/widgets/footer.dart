@@ -1,42 +1,28 @@
 import 'package:arozd_cv/ui/constants/app_colors.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
+import 'package:arozd_cv/ui/widgets/link_text.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final _url = 'https://github.com/Antoraro/arozdorozhniuk_cv';
+    final _myUrl = 'https://github.com/Antoraro/arozdorozhniuk_cv';
+    final _flutterUrl = 'https://github.com/flutter/flutter';
     final _baseTheme = Theme.of(context).textTheme.caption.copyWith(
           color: AppColors.dark,
         );
-    final _tapRecognizer = new TapGestureRecognizer()
-      ..onTap = () => launch(_url);
-
-    return Padding(
+    return Container(
+      alignment: Alignment.center,
       padding: EdgeInsets.only(top: UISize.pMedium),
-      child: RichText(
-        textAlign: TextAlign.center,
-        text: TextSpan(
-          style: _baseTheme,
-          children: <TextSpan>[
-            TextSpan(text: 'Made by '),
-            TextSpan(
-              text: '@',
-              style: _baseTheme.copyWith(fontWeight: FontWeight.w700),
-            ),
-            TextSpan(
-              text: 'antoraro',
-              style: _baseTheme.copyWith(
-                fontWeight: FontWeight.w700,
-                decoration: TextDecoration.underline,
-              ),
-              recognizer: _tapRecognizer,
-            ),
-          ],
-        ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Text('Made by ', style: _baseTheme),
+          LinkText(url: _myUrl, text: '@antoraro'),
+          Text(' with ', style: _baseTheme),
+          LinkText(url: _flutterUrl, text: 'Flutter Web'),
+        ],
       ),
     );
   }

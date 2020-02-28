@@ -7,9 +7,9 @@ class BaseListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: SelectableText(data.title),
-      subtitle: SelectableText('${data.dateFrom} - ${data.dateTo}'),
-      trailing: SelectableText(
+      title: Text(data.title),
+      subtitle: Text('${data.dateFrom} - ${data.dateTo}'),
+      trailing: Text(
         data.place,
         style: Theme.of(context).textTheme.caption,
       ),

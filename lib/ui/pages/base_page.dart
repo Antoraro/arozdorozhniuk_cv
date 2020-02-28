@@ -17,11 +17,13 @@ abstract class BasePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       constraints: BoxConstraints(maxWidth: UISize.maxWidth),
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: widgets.length,
-        padding: EdgeInsets.all(UISize.pMedium),
-        itemBuilder: (context, index) => BitmapCache(child: widgets[index]),
+      child: SingleChildScrollView(
+        child: BitmapCache(
+          child: Padding(
+            padding: EdgeInsets.all(UISize.pMedium),
+            child: Column(children: widgets),
+          ),
+        ),
       ),
     );
   }

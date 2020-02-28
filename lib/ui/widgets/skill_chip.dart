@@ -13,7 +13,7 @@ class SkillChip extends StatelessWidget {
       elevation: 0.0,
       backgroundColor: AppColors.primary,
       shadowColor: AppColors.primary,
-      label: SelectableText(
+      label: Text(
         name,
         style: Theme.of(context).textTheme.button.copyWith(
               color: AppColors.accent,

@@ -13,7 +13,7 @@ class ProfileView extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: EdgeInsets.only(top: UISize.pSmall, bottom: UISize.pSmall),
-          child: SelectableText(
+          child: Text(
             'PROFILE',
             style: Theme.of(context).textTheme.headline6.copyWith(
                   color: AppColors.dark,
@@ -22,7 +22,7 @@ class ProfileView extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.only(left: UISize.pMedium),
-          child: SelectableText(
+          child: Text(
             locator<MyInfo>().profileText,
             style: Theme.of(context).textTheme.button,
           ),

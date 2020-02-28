@@ -43,7 +43,7 @@ class _EmploymentListTileState extends State<EmploymentListTile> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          SelectableText(
+          Text(
             p.name,
             style: Theme.of(context).textTheme.subtitle2.copyWith(
                   fontWeight: FontWeight.w600,
@@ -51,7 +51,7 @@ class _EmploymentListTileState extends State<EmploymentListTile> {
           ),
           SizedBox(height: UISize.pSmall),
           p.description != null
-              ? SelectableText(
+              ? Text(
                   p.description,
                   style: Theme.of(context).textTheme.button,
                 )
@@ -68,14 +68,14 @@ class _EmploymentListTileState extends State<EmploymentListTile> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         SizedBox(height: UISize.pSmall),
-        SelectableText(
+        Text(
           'Responsibilities:',
           style: Theme.of(context).textTheme.bodyText2.copyWith(
                 decoration: TextDecoration.underline,
               ),
         ),
         SizedBox(height: UISize.pSmall / 2),
-        SelectableText(
+        Text(
           ' - ${project.responsibilities.join('\n - ')}',
           style: Theme.of(context).textTheme.button,
         ),
