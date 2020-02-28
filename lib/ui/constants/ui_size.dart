@@ -5,7 +5,7 @@ class UISize {
   static const double pLarge = 24.0;
   static const double maxWidth = 1000.0;
   static const double mainPadding = 16.0;
-  static const double cardElevation = 5.0;
+  static const double cardElevation = 3.0;
   static const double circleRadius = 90.0;
   static const int animationDuration = 300;
 

@@ -1,4 +1,4 @@
-import 'package:arozd_cv/ui/pages/main_page.dart';
+import 'package:arozd_cv/ui/pages/base_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -18,7 +18,7 @@ class LayoutTemplate extends StatelessWidget {
     );
   }
 
-  MainPage _buildBody({DeviceScreenType screenType}) {
+  BasePage _buildBody({DeviceScreenType screenType}) {
     switch (screenType) {
       case DeviceScreenType.Mobile:
         return MobilePage();

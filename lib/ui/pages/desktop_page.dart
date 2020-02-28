@@ -12,9 +12,9 @@ import 'package:arozd_cv/ui/views/skills/skills_mine_view.dart';
 import 'package:arozd_cv/ui/widgets/base_card.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'main_page.dart';
+import 'base_page.dart';
 
-class DesktopPage extends MainPage {
+class DesktopPage extends BasePage {
   @override
   Widget buildHeaderView() {
     return BaseCard(

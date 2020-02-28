@@ -1,15 +1,16 @@
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/widgets/bitmap_cache.dart';
+import 'package:arozd_cv/ui/widgets/footer.dart';
 import 'package:flutter/cupertino.dart';
 
-abstract class MainPage extends StatelessWidget {
+abstract class BasePage extends StatelessWidget {
   List<Widget> get widgets => [
         buildHeaderView(),
         buildSkillsView(),
         buildProfileView(),
         buildEducationView(),
         buildEmploymentView(),
-        SizedBox(height: UISize.pLarge),
+        buildFooterView(),
       ];
 
   @override
@@ -43,5 +44,9 @@ abstract class MainPage extends StatelessWidget {
 
   Widget buildEmploymentView() {
     return SizedBox.shrink();
+  }
+
+  Widget buildFooterView() {
+    return Footer();
   }
 }

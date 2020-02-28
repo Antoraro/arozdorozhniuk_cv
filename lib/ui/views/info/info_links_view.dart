@@ -12,7 +12,6 @@ class InfoLinksView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.end,
       children: locator<MyInfo>()
           .links
@@ -27,28 +26,30 @@ class InfoLinksView extends StatelessWidget {
   }
 
   Widget _buildLinkButton({String assetPath, String url}) {
-    return SizedBox(
-      height: UISize.linkButtonSize,
-      width: UISize.linkButtonSize,
-      child: Card(
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: UISize.pSmall / 2),
+      child: Material(
         color: AppColors.primary,
         shadowColor: Colors.blueGrey,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(UISize.circleRadius),
-        ),
+        borderRadius: BorderRadius.circular(UISize.circleRadius),
         elevation: UISize.cardElevation,
-        child: InkWell(
-          onTap: () async {
-            if (await canLaunch(url)) {
-              await launch(url);
-            } else {
-              throw 'Could not launch $url';
-            }
-          },
-          child: Container(
-            constraints: BoxConstraints.expand(),
-            alignment: Alignment.center,
-            child: Image.asset(assetPath, fit: BoxFit.fill, semanticLabel: url),
+        child: SizedBox(
+          height: UISize.linkButtonSize,
+          width: UISize.linkButtonSize,
+          child: InkWell(
+            onTap: () async {
+              if (await canLaunch(url)) {
+                await launch(url);
+              } else {
+                throw 'Could not launch $url';
+              }
+            },
+            child: Container(
+              constraints: BoxConstraints.expand(),
+              alignment: Alignment.center,
+              child:
+                  Image.asset(assetPath, fit: BoxFit.fill, semanticLabel: url),
+            ),
           ),
         ),
       ),

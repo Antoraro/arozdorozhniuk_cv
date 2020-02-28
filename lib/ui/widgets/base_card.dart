@@ -26,18 +26,17 @@ class BaseCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      height: height,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(borderRadius),
-        ),
+    return Padding(
+      padding: EdgeInsets.only(bottom: elevation * 2),
+      child: Material(
         color: color,
-        shadowColor: shadowColor ?? AppColors.secondary.withOpacity(0.2),
         elevation: elevation,
-        child: Padding(
+        borderRadius: BorderRadius.circular(borderRadius),
+        shadowColor: shadowColor ?? AppColors.secondary.withOpacity(0.1),
+        child: Container(
           padding: EdgeInsets.all(padding),
+          height: height,
+          width: width,
           child: child,
         ),
       ),
