@@ -1,3 +1,5 @@
 # cv_web
 
-Anton Rozdorozhniuk CV
+Flutter Web based CV app.
+
+To configure your personal CV just update config file in assets/config/info.json
