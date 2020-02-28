@@ -1,5 +1,5 @@
 import 'package:arozd_cv/ui/constants/app_colors.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class LinePainter extends CustomPainter {
   Paint _paintBkgLine;

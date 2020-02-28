@@ -1,5 +1,6 @@
 import 'package:arozd_cv/ui/constants/app_colors.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
+import 'package:arozd_cv/ui/pages/main_page.dart';
 import 'package:arozd_cv/ui/views/education/education_list.dart';
 import 'package:arozd_cv/ui/views/employment/employment_list.dart';
 import 'package:arozd_cv/ui/views/info/info_avatar_view.dart';
@@ -10,26 +11,11 @@ import 'package:arozd_cv/ui/views/profile/profile_view.dart';
 import 'package:arozd_cv/ui/views/skills/skills_languages_view.dart';
 import 'package:arozd_cv/ui/views/skills/skills_mine_view.dart';
 import 'package:arozd_cv/ui/widgets/base_card.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
-class TabletPage extends StatelessWidget {
+class TabletPage extends MainPage {
   @override
-  Widget build(BuildContext context) {
-    return ListView(
-      padding: EdgeInsets.all(UISize.pSmall),
-      shrinkWrap: true,
-      children: <Widget>[
-        _buildHeaderView(),
-        _buildSkillsView(),
-        _buildProfileView(),
-        _buildEducationView(),
-        _buildEmploymentView(),
-        SizedBox(height: UISize.pLarge),
-      ],
-    );
-  }
-
-  Widget _buildHeaderView() {
+  Widget buildHeaderView() {
     return BaseCard(
       color: AppColors.primary,
       shadowColor: AppColors.primary,
@@ -52,7 +38,8 @@ class TabletPage extends StatelessWidget {
     );
   }
 
-  Widget _buildSkillsView() {
+  @override
+  Widget buildSkillsView() {
     return BaseCard(
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -74,19 +61,22 @@ class TabletPage extends StatelessWidget {
     );
   }
 
-  Widget _buildProfileView() {
+  @override
+  Widget buildProfileView() {
     return BaseCard(
       child: ProfileView(),
     );
   }
 
-  Widget _buildEducationView() {
+  @override
+  Widget buildEducationView() {
     return BaseCard(
       child: EducationList(),
     );
   }
 
-  Widget _buildEmploymentView() {
+  @override
+  Widget buildEmploymentView() {
     return BaseCard(
       child: EmploymentList(),
     );

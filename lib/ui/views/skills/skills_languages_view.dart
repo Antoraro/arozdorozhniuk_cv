@@ -1,6 +1,6 @@
 import 'package:arozd_cv/config/my_info.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../locator.dart';

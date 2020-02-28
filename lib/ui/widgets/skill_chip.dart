@@ -1,4 +1,5 @@
 import 'package:arozd_cv/ui/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SkillChip extends StatelessWidget {

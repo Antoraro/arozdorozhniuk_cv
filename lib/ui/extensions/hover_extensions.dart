@@ -2,7 +2,7 @@
 import 'dart:html' as html;
 
 import 'package:arozd_cv/ui/widgets/translate_on_hover.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 extension HoverExtensions on Widget {
   static final appContainer =

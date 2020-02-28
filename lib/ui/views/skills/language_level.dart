@@ -1,4 +1,5 @@
 import 'package:arozd_cv/ui/widgets/animated_percent_linear.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LanguageLevel extends StatelessWidget {

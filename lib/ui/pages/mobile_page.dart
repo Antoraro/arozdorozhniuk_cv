@@ -11,26 +11,12 @@ import 'package:arozd_cv/ui/views/skills/skills_languages_view.dart';
 import 'package:arozd_cv/ui/views/skills/skills_mine_view.dart';
 import 'package:arozd_cv/ui/widgets/base_card.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
-class MobilePage extends StatelessWidget {
+import 'main_page.dart';
+
+class MobilePage extends MainPage {
   @override
-  Widget build(BuildContext context) {
-    return ListView(
-      padding: EdgeInsets.all(UISize.pSmall),
-      shrinkWrap: true,
-      children: <Widget>[
-        _buildHeaderView(),
-        _buildSkillsView(),
-        _buildProfileView(),
-        _buildEducationView(),
-        _buildEmploymentView(),
-        SizedBox(height: UISize.pLarge),
-      ],
-    );
-  }
-
-  Widget _buildHeaderView() {
+  Widget buildHeaderView() {
     return BaseCard(
       color: AppColors.primary,
       shadowColor: AppColors.primary,
@@ -53,7 +39,8 @@ class MobilePage extends StatelessWidget {
     );
   }
 
-  Widget _buildSkillsView() {
+  @override
+  Widget buildSkillsView() {
     return BaseCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -66,19 +53,22 @@ class MobilePage extends StatelessWidget {
     );
   }
 
-  Widget _buildProfileView() {
+  @override
+  Widget buildProfileView() {
     return BaseCard(
       child: ProfileView(),
     );
   }
 
-  Widget _buildEducationView() {
+  @override
+  Widget buildEducationView() {
     return BaseCard(
       child: EducationList(),
     );
   }
 
-  Widget _buildEmploymentView() {
+  @override
+  Widget buildEmploymentView() {
     return BaseCard(
       child: EmploymentList(),
     );

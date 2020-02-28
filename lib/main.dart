@@ -1,6 +1,7 @@
 import 'package:arozd_cv/config/my_info.dart';
 import 'package:arozd_cv/locator.dart';
 import 'package:arozd_cv/ui/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'layout_template.dart';
