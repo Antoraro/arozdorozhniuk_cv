@@ -25,7 +25,7 @@ class LinkText extends StatelessWidget {
               color: AppColors.dark,
               fontWeight: FontWeight.w700,
             ),
-      ).showCursorOnHover,
+      ).showCursorOnHover.underlineOnHover,
     );
   }
 }

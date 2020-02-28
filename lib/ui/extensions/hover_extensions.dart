@@ -2,6 +2,7 @@
 import 'dart:html' as html;
 
 import 'package:arozd_cv/ui/widgets/translate_on_hover.dart';
+import 'package:arozd_cv/ui/widgets/underline_on_hover.dart';
 import 'package:flutter/cupertino.dart';
 
 extension HoverExtensions on Widget {
@@ -24,6 +25,12 @@ extension HoverExtensions on Widget {
 
   Widget get moveUpOnHover {
     return TranslateOnHover(
+      child: this,
+    );
+  }
+
+  Widget get underlineOnHover {
+    return UnderlineOnHover(
       child: this,
     );
   }

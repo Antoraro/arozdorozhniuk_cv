@@ -11,15 +11,13 @@ class ProfileView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        Padding(
-          padding: EdgeInsets.only(top: UISize.pSmall, bottom: UISize.pSmall),
-          child: Text(
-            'PROFILE',
-            style: Theme.of(context).textTheme.headline6.copyWith(
-                  color: AppColors.dark,
-                ),
-          ),
+        Text(
+          'PROFILE',
+          style: Theme.of(context).textTheme.headline6.copyWith(
+                color: AppColors.primary,
+              ),
         ),
+        SizedBox(height: UISize.pMedium),
         Padding(
           padding: EdgeInsets.only(left: UISize.pMedium),
           child: Text(

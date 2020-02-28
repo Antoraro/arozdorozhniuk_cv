@@ -1,8 +1,10 @@
 class UISize {
   // common sizes
+  static const double zero = 0.0;
   static const double pSmall = 8.0;
   static const double pMedium = 16.0;
   static const double pLarge = 24.0;
+  static const double underlineWidth = 48.0;
   static const double maxWidth = 1000.0;
   static const double mainPadding = 16.0;
   static const double cardElevation = 3.0;
