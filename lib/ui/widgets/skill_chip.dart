@@ -11,12 +11,11 @@ class SkillChip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Chip(
       elevation: 0.0,
-      backgroundColor: AppColors.primary,
-      shadowColor: AppColors.primary,
+      backgroundColor: AppColors.secondary.withOpacity(0.2),
       label: Text(
         name,
         style: Theme.of(context).textTheme.button.copyWith(
-              color: AppColors.accent,
+              color: AppColors.dark,
               fontSize: 13.0,
             ),
       ),
