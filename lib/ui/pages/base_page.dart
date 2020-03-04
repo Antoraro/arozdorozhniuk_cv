@@ -10,6 +10,7 @@ abstract class BasePage extends StatelessWidget {
         buildProfileView(),
         buildEducationView(),
         buildEmploymentView(),
+        buildPersonalQualitiesView(),
         buildFooterView(),
       ];
 
@@ -45,6 +46,10 @@ abstract class BasePage extends StatelessWidget {
   }
 
   Widget buildEmploymentView() {
+    return SizedBox.shrink();
+  }
+
+  Widget buildPersonalQualitiesView() {
     return SizedBox.shrink();
   }
 

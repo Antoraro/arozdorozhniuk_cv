@@ -85,4 +85,11 @@ class DesktopPage extends BasePage {
       child: EmploymentList(),
     );
   }
+
+//  @override
+//  Widget buildPersonalQualitiesView() {
+//    return BaseCard(
+//      child: PersonalQualities(),
+//    );
+//  }
 }

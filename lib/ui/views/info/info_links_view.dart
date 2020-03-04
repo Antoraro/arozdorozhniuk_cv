@@ -9,20 +9,16 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../../locator.dart';
 
 class InfoLinksView extends StatelessWidget {
+  final _info = locator<MyInfo>();
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: locator<MyInfo>()
-          .links
-          .entries
-          .map(
-            (e) => _buildLinkButton(url: e.value, assetPath: e.key)
-                .showCursorOnHover
-                .moveUpOnHover,
-          )
-          .toList(),
-    );
+    List<Widget> rowChildren = _info.links.entries
+        .map(
+          (e) => _buildLinkButton(url: e.value, assetPath: e.key),
+        )
+        .toList();
+    rowChildren.add(_buildLinkButton(url: _info.cvLink));
+    return Row(mainAxisAlignment: MainAxisAlignment.end, children: rowChildren);
   }
 
   Widget _buildLinkButton({String assetPath, String url}) {
@@ -45,14 +41,24 @@ class InfoLinksView extends StatelessWidget {
               }
             },
             child: Container(
+              color: AppColors.primary,
               constraints: BoxConstraints.expand(),
               alignment: Alignment.center,
-              child:
-                  Image.asset(assetPath, fit: BoxFit.fill, semanticLabel: url),
+              child: assetPath != null && assetPath.isNotEmpty
+                  ? Image.asset(
+                      assetPath,
+                      fit: BoxFit.fill,
+                      semanticLabel: url,
+                    )
+                  : Icon(
+                      Icons.link,
+                      semanticLabel: url,
+                      color: AppColors.accent,
+                    ),
             ),
           ),
         ),
       ),
-    );
+    ).showCursorOnHover.moveUpOnHover;
   }
 }

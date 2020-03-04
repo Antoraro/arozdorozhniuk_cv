@@ -1,10 +1,13 @@
 class MyInfo {
   String title;
+  String cvLink;
   String phone;
   String mail;
+  String skype;
   String name;
   String position;
   String profileText;
+  String personalQualities;
   Map<String, String> links;
   Map<String, double> languages;
   List<String> skillList;
@@ -13,11 +16,14 @@ class MyInfo {
 
   MyInfo(
       {this.title,
+      this.cvLink,
       this.phone,
       this.mail,
+      this.skype,
       this.name,
       this.position,
       this.profileText,
+      this.personalQualities,
       this.links,
       this.languages,
       this.skillList,
@@ -26,11 +32,14 @@ class MyInfo {
 
   MyInfo.fromJson(Map<String, dynamic> json) {
     title = json['title'];
+    cvLink = json['cvLink'];
     phone = json['phone'];
     mail = json['mail'];
+    skype = json['skype'];
     name = json['name'];
     position = json['position'];
     profileText = json['profileText'];
+    personalQualities = json['personalQualities'];
     links = Map<String, String>.from(json['links']);
     languages = Map<String, double>.from(json['languages']);
     skillList = json['skillList'].cast<String>();
@@ -51,11 +60,14 @@ class MyInfo {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['title'] = this.title;
+    data['cvLink'] = this.cvLink;
     data['phone'] = this.phone;
     data['mail'] = this.mail;
+    data['skype'] = this.skype;
     data['name'] = this.name;
     data['position'] = this.position;
     data['profileText'] = this.profileText;
+    data['personalQualities'] = this.personalQualities;
     if (this.links != null) {
       data['links'] = this.links;
     }

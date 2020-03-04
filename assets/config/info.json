@@ -1,10 +1,13 @@
 {
   "title": "Anton Rozdorozhniuk CV",
+  "cvLink": "https://drive.google.com/file/d/1ALy3ADye7meWKNuAt2ShOmKCArMUPMwl/view?usp=sharing",
   "phone": "+380936011715",
   "mail": "anton.rozdorozhniuk@gmail.com",
+  "skype": "anton.rozdorogniuk",
   "name": "Anton Rozdorozhniuk",
   "position": "Experienced Mobile Developer",
-  "profileText": "I'm experienced mobile and backend developer, adept in all stages of advanced web and mobile development.\n\nI'm knowledgeable in user interface, design, testing, and debugging processes. I have great expertise in design, deploying, testing and maintenance of mobile applications and web systems. Equipped with a diverse and promising skill-set. \n\nI'm froficient in an assortment of technologies, including Java, Spring, kotiln and Flutter. Able to effectively self-manage during independent projects, as well as collaborate in a team setting.",
+  "profileText": "I'm experienced mobile developer with good knowledge in backend development, adept in all stages of advanced web and mobile development.\n\nI'm knowledgeable in user interface, design, testing, and debugging processes. I have great expertise in design, deploying, testing and maintenance of mobile applications and web systems. Equipped with a diverse and promising skill-set. \n\nI'm proficient in an assortment of technologies, including Java, Spring, kotiln and Flutter. Able to effectively self-manage during independent projects, as well as collaborate in a team setting.",
+  "personalQualities": "",
   "links": {
     "assets/img/linkedin.png": "https://www.linkedin.com/in/anton-rozdorozhniuk-b44969125/",
     "assets/img/facebook.png": "https://www.facebook.com/anton.rozdorogniuk",
@@ -26,14 +29,24 @@
     "Spring",
     "Android SDK",
     "Flutter SDK",
+    "PostgreSQL",
+    "MySQL",
+    "MongoDB",
+    "Firebase",
+    "Figma",
+    "Zeplin",
     "Design Patterns",
     "Algorithms",
     "Rx programming",
     "Design",
-    "Analytical Skills",
-    "iOS Development",
-    "Android Development",
-    "Backend Development"
+    "Git",
+    "Jira",
+    "Postman",
+    "Intellij Idea",
+    "Android Studio",
+    "Visual Studio Code",
+    "Windows",
+    "MacOS"
   ],
   "educationList": [
     {
@@ -64,6 +77,7 @@
       "projects": [
         {
           "name": "Ride Genie (Taxi app)",
+          "url": "https://www.facebook.com/ridegenie/",
           "description": "Ride Genie is the Easiest, Most Convenient Way To Get a Ride in Las Vegas. Simply Choose Your Ride Between Cabs or Black Cars. Like UBER, but Better!",
           "responsibilities": [
             "Android and iOS development",

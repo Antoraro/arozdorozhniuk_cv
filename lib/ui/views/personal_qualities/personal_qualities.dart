@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 
 import '../../../locator.dart';
 
-class ProfileView extends StatelessWidget {
-  final _text = locator<MyInfo>().profileText;
+class PersonalQualities extends StatelessWidget {
+  final _text = locator<MyInfo>().personalQualities;
   @override
   Widget build(BuildContext context) {
     if (_text == null || _text.isEmpty) {
@@ -16,7 +16,7 @@ class ProfileView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         Text(
-          'PROFILE',
+          'PERSONAL QUALITIES',
           style: Theme.of(context).textTheme.headline6.copyWith(
                 color: AppColors.primary,
               ),

@@ -23,7 +23,7 @@ class LanguageLevel extends StatelessWidget {
           text,
           style: Theme.of(context).textTheme.subtitle1,
         ),
-        SizedBox(height: 5.0),
+        SizedBox(height: UISize.pSmall / 2),
         AnimatedPercentLinear(
           percent: percent,
           height: strokeHeight,

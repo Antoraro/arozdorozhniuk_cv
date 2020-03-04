@@ -81,4 +81,11 @@ class TabletPage extends BasePage {
       child: EmploymentList(),
     );
   }
+
+//  @override
+//  Widget buildPersonalQualitiesView() {
+//    return BaseCard(
+//      child: PersonalQualities(),
+//    );
+//  }
 }
