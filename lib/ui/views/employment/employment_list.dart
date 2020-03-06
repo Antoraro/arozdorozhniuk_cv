@@ -1,10 +1,10 @@
 import 'package:arozd_cv/config/my_info.dart';
 import 'package:arozd_cv/ui/constants/app_colors.dart';
+import 'package:arozd_cv/ui/widgets/base_list_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../locator.dart';
-import 'employment_list_tile.dart';
 
 class EmploymentList extends StatelessWidget {
   @override
@@ -22,7 +22,7 @@ class EmploymentList extends StatelessWidget {
           children: locator<MyInfo>()
               .employments
               .reversed
-              .map((e) => EmploymentListTile(e))
+              .map((e) => BaseListTile(data: e, onlyHeader: false))
               .toList(),
         ),
       ],

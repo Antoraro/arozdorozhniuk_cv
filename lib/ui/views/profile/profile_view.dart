@@ -21,13 +21,10 @@ class ProfileView extends StatelessWidget {
                 color: AppColors.primary,
               ),
         ),
-        SizedBox(height: UISize.pMedium),
-        Padding(
-          padding: EdgeInsets.only(left: UISize.pMedium),
-          child: Text(
-            _text,
-            style: Theme.of(context).textTheme.button,
-          ),
+        SizedBox(height: UISize.pSmall),
+        Text(
+          _text,
+          style: Theme.of(context).textTheme.button,
         ),
       ],
     );

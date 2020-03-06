@@ -26,7 +26,7 @@ class _UnderlineOnHoverState extends State<UnderlineOnHover> {
             height: 1.0,
             width: _hovering ? UISize.underlineWidth : UISize.zero,
             duration: const Duration(milliseconds: UISize.animationDuration),
-            curve: Curves.easeInOut,
+            curve: Curves.easeInOutCubic,
             color: AppColors.dark,
           ),
         ],

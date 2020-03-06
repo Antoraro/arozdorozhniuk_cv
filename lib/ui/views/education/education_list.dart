@@ -20,7 +20,7 @@ class EducationList extends StatelessWidget {
           children: locator<MyInfo>()
               .educationList
               .reversed
-              .map((e) => BaseListTile(e))
+              .map((e) => BaseListTile(data: e))
               .toList(),
         ),
       ],

@@ -5,7 +5,7 @@ class UISize {
   static const double pMedium = 16.0;
   static const double pLarge = 24.0;
   static const double underlineWidth = 48.0;
-  static const double maxWidth = 1000.0;
+  static const double maxWidth = 900.0;
   static const double mainPadding = 16.0;
   static const double cardElevation = 3.0;
   static const double circleRadius = 90.0;
@@ -19,4 +19,7 @@ class UISize {
 
   // skill view sizes
   static const double skillsHeightDesktop = 160.0;
+
+  // divider
+  static const double dividerIndent = 48.0;
 }

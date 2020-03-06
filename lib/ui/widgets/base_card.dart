@@ -27,7 +27,7 @@ class BaseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: elevation * 2),
+      padding: EdgeInsets.only(bottom: UISize.pSmall),
       child: Material(
         color: color,
         elevation: elevation,

@@ -23,12 +23,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: AppColors.primary,
         brightness: Brightness.light,
-        dividerColor: AppColors.transparent,
         textTheme:
             Theme.of(context).textTheme.apply(fontFamily: 'San Francisco'),
       ),
       home: Scaffold(
-        backgroundColor: AppColors.background,
+        backgroundColor: AppColors.secondary.withOpacity(0.1),
         body: LayoutTemplate(),
       ),
     );

@@ -32,7 +32,7 @@ class _AnimatedPercentLinearState extends State<AnimatedPercentLinear>
       vsync: this,
     );
     _animation = _getAnimationTween().animate(
-      CurvedAnimation(parent: controller, curve: Curves.easeInOut),
+      CurvedAnimation(parent: controller, curve: Curves.easeInOutCubic),
     )..addListener(() {
         setState(() {
           _progress = _animation.value;
