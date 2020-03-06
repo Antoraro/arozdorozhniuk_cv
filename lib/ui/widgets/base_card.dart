@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class BaseCard extends StatelessWidget {
   final double width;
   final double height;
-  final double padding;
+  final EdgeInsetsGeometry padding;
   final double elevation;
   final double borderRadius;
   final Color color;
@@ -16,12 +16,15 @@ class BaseCard extends StatelessWidget {
   final String header;
 
   const BaseCard({
-    this.width,
-    this.height,
-    this.padding = UISize.pMedium,
+    this.padding = const EdgeInsets.symmetric(
+      vertical: UISize.pMedium,
+      horizontal: UISize.pLarge,
+    ),
+    this.color = AppColors.accent,
     this.borderRadius = UISize.pLarge,
     this.elevation = UISize.cardElevation,
-    this.color = AppColors.accent,
+    this.width,
+    this.height,
     this.shadowColor,
     this.header,
     @required this.child,
@@ -37,7 +40,7 @@ class BaseCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(borderRadius),
         shadowColor: shadowColor ?? AppColors.secondary.withOpacity(0.1),
         child: Container(
-          padding: EdgeInsets.all(padding),
+          padding: padding,
           height: height,
           width: width,
           child: Column(
@@ -53,10 +56,7 @@ class BaseCard extends StatelessWidget {
                     )
                   : SizedBox.shrink(),
               Flexible(
-                child: Padding(
-                  padding: EdgeInsets.only(left: UISize.pSmall),
-                  child: child,
-                ),
+                child: child,
               ),
             ],
           ),
