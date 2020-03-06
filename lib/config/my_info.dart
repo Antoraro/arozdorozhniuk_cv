@@ -12,7 +12,7 @@ class MyInfo {
   Map<String, double> languages;
   List<String> skillList;
   List<Employment> educationList;
-  List<Employment> employments;
+  List<Employment> employmentList;
 
   MyInfo(
       {this.title,
@@ -28,7 +28,7 @@ class MyInfo {
       this.languages,
       this.skillList,
       this.educationList,
-      this.employments});
+      this.employmentList});
 
   MyInfo.fromJson(Map<String, dynamic> json) {
     title = json['title'];
@@ -49,10 +49,10 @@ class MyInfo {
         educationList.add(new Employment.fromJson(v));
       });
     }
-    if (json['employments'] != null) {
-      employments = new List<Employment>();
-      json['employments'].forEach((v) {
-        employments.add(new Employment.fromJson(v));
+    if (json['employmentList'] != null) {
+      employmentList = new List<Employment>();
+      json['employmentList'].forEach((v) {
+        employmentList.add(new Employment.fromJson(v));
       });
     }
   }
@@ -79,8 +79,9 @@ class MyInfo {
       data['educationList'] =
           this.educationList.map((v) => v.toJson()).toList();
     }
-    if (this.employments != null) {
-      data['employments'] = this.employments.map((v) => v.toJson()).toList();
+    if (this.employmentList != null) {
+      data['employmentList'] =
+          this.employmentList.map((v) => v.toJson()).toList();
     }
     return data;
   }

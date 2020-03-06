@@ -1,7 +1,13 @@
+import 'package:arozd_cv/config/my_info.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
+import 'package:arozd_cv/ui/views/education/education_list.dart';
+import 'package:arozd_cv/ui/views/employment/employment_list.dart';
 import 'package:arozd_cv/ui/widgets/bitmap_cache.dart';
 import 'package:arozd_cv/ui/widgets/footer.dart';
+import 'package:arozd_cv/ui/widgets/text_info_view.dart';
 import 'package:flutter/cupertino.dart';
+
+import '../../locator.dart';
 
 abstract class BasePage extends StatelessWidget {
   List<Widget> get widgets => [
@@ -38,19 +44,25 @@ abstract class BasePage extends StatelessWidget {
   }
 
   Widget buildProfileView() {
-    return SizedBox.shrink();
+    return TextInfoView(
+      header: 'PROFILE',
+      description: locator<MyInfo>().profileText,
+    );
   }
 
   Widget buildEducationView() {
-    return SizedBox.shrink();
+    return EducationList();
   }
 
   Widget buildEmploymentView() {
-    return SizedBox.shrink();
+    return EmploymentList();
   }
 
   Widget buildPersonalQualitiesView() {
-    return SizedBox.shrink();
+    return TextInfoView(
+      header: 'PERSONAL QUALITIES',
+      description: locator<MyInfo>().personalQualities,
+    );
   }
 
   Widget buildFooterView() {

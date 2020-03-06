@@ -12,6 +12,7 @@ class BaseCard extends StatelessWidget {
   final Color color;
   final Color shadowColor;
   final Widget child;
+  final String header;
 
   const BaseCard({
     this.width,
@@ -21,6 +22,7 @@ class BaseCard extends StatelessWidget {
     this.elevation = UISize.cardElevation,
     this.color = AppColors.accent,
     this.shadowColor,
+    this.header,
     @required this.child,
   });
 
@@ -37,7 +39,28 @@ class BaseCard extends StatelessWidget {
           padding: EdgeInsets.all(padding),
           height: height,
           width: width,
-          child: child,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              header != null && header.isNotEmpty
+                  ? Flexible(
+                      child: Text(
+                        header,
+                        style: Theme.of(context).textTheme.headline6.copyWith(
+                              color: AppColors.primary,
+                            ),
+                      ),
+                    )
+                  : SizedBox.shrink(),
+              Flexible(
+                child: Padding(
+                  padding: EdgeInsets.only(left: UISize.pSmall),
+                  child: child,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

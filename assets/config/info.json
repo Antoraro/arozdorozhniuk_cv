@@ -50,9 +50,9 @@
   ],
   "educationList": [
     {
-      "title": "Vinnytsia Private Secondary School \"AIST\" (Stork)",
-      "dateFrom": "Sep 2001",
-      "dateTo": "Sep 2012",
+      "title": "Master of Computer Applications (M.C.A.), Vinnytsia National Technical University",
+      "dateFrom": "Sep 2016",
+      "dateTo": "Sep 2018",
       "place": "Vinnytsia"
     },
     {
@@ -62,28 +62,28 @@
       "place": "Vinnytsia"
     },
     {
-      "title": "Master of Computer Applications (M.C.A.), Vinnytsia National Technical University",
-      "dateFrom": "Sep 2016",
-      "dateTo": "Sep 2018",
+      "title": "Vinnytsia Private Secondary School \"AIST\" (Stork)",
+      "dateFrom": "Sep 2001",
+      "dateTo": "Sep 2012",
       "place": "Vinnytsia"
     }
   ],
-  "employments": [
+  "employmentList": [
     {
-      "title": "Junior Software Engineer, iKrok",
-      "dateFrom": "Jan 2014",
-      "dateTo": "Aug 2014",
+      "title": "Software Engineer, OnSeo",
+      "dateFrom": "Jan 2018",
+      "dateTo": "Present",
       "place": "Vinnytsia",
       "projects": [
         {
-          "name": "Ride Genie (Taxi app)",
-          "url": "https://www.facebook.com/ridegenie/",
-          "description": "Ride Genie is the Easiest, Most Convenient Way To Get a Ride in Las Vegas. Simply Choose Your Ride Between Cabs or Black Cars. Like UBER, but Better!",
+          "name": "Virgin Bet: Sports Betting on Football & Racing",
+          "url": "https://play.google.com/store/apps/details?id=com.virginbet.virginbetuk&hl=ru",
+          "description": "Virgin Bet is a brand new sportsbook launched by Gamseys and powered by the popular SBTech gaming platform software providers.",
           "responsibilities": [
-            "Android and iOS development",
+            "Android development",
             "UI/UX implementation",
-            "Google Maps integration",
-            "Rest API integration"
+            "Rest API and Sockets integration",
+            "Project architecture development"
           ]
         }
       ]
@@ -109,20 +109,20 @@
       ]
     },
     {
-      "title": "Software Engineer, OnSeo",
-      "dateFrom": "Jan 2018",
-      "dateTo": "Present",
+      "title": "Junior Software Engineer, iKrok",
+      "dateFrom": "Jan 2014",
+      "dateTo": "Aug 2014",
       "place": "Vinnytsia",
       "projects": [
         {
-          "name": "Virgin Bet: Sports Betting on Football & Racing",
-          "url": "https://play.google.com/store/apps/details?id=com.virginbet.virginbetuk&hl=ru",
-          "description": "Virgin Bet is a brand new sportsbook launched by Gamseys and powered by the popular SBTech gaming platform software providers.",
+          "name": "Ride Genie (Taxi app)",
+          "url": "https://www.facebook.com/ridegenie/",
+          "description": "Ride Genie is the Easiest, Most Convenient Way To Get a Ride in Las Vegas. Simply Choose Your Ride Between Cabs or Black Cars. Like UBER, but Better!",
           "responsibilities": [
-            "Android development",
+            "Android and iOS development",
             "UI/UX implementation",
-            "Rest API and Sockets integration",
-            "Project architecture development"
+            "Google Maps integration",
+            "Rest API integration"
           ]
         }
       ]
