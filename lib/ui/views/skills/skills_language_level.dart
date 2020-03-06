@@ -1,3 +1,4 @@
+import 'package:arozd_cv/ui/constants/app_styles.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/widgets/animated_percent_linear.dart';
 import 'package:flutter/cupertino.dart';
@@ -21,7 +22,7 @@ class LanguageLevel extends StatelessWidget {
       children: <Widget>[
         Text(
           text,
-          style: Theme.of(context).textTheme.subtitle1,
+          style: AppStyles.languageText(context),
         ),
         SizedBox(height: UISize.pSmall / 2),
         AnimatedPercentLinear(

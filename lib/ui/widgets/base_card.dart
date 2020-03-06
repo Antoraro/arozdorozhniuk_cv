@@ -1,4 +1,5 @@
 import 'package:arozd_cv/ui/constants/app_colors.dart';
+import 'package:arozd_cv/ui/constants/app_styles.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -47,9 +48,7 @@ class BaseCard extends StatelessWidget {
                   ? Flexible(
                       child: Text(
                         header,
-                        style: Theme.of(context).textTheme.headline6.copyWith(
-                              color: AppColors.primary,
-                            ),
+                        style: AppStyles.baseCardHeader(context),
                       ),
                     )
                   : SizedBox.shrink(),

@@ -1,5 +1,5 @@
 import 'package:arozd_cv/config/my_info.dart';
-import 'package:arozd_cv/ui/constants/app_colors.dart';
+import 'package:arozd_cv/ui/constants/app_styles.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,24 +16,12 @@ class InfoContactsView extends StatelessWidget {
       children: <Widget>[
         GestureDetector(
           onTap: () => launch('tel:${info.phone}'),
-          child: Text(
-            info.phone,
-            style: Theme.of(context).textTheme.caption.copyWith(
-                  color: AppColors.accent,
-                  fontWeight: FontWeight.w100,
-                ),
-          ),
+          child: Text(info.phone, style: AppStyles.contactsText(context)),
         ),
         SizedBox(height: UISize.pSmall),
         GestureDetector(
           onTap: () => launch('mailto:${info.mail}'),
-          child: Text(
-            info.mail,
-            style: Theme.of(context).textTheme.caption.copyWith(
-                  color: AppColors.accent,
-                  fontWeight: FontWeight.w100,
-                ),
-          ),
+          child: Text(info.mail, style: AppStyles.contactsText(context)),
         ),
       ],
     );

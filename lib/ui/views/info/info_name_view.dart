@@ -1,5 +1,5 @@
 import 'package:arozd_cv/config/my_info.dart';
-import 'package:arozd_cv/ui/constants/app_colors.dart';
+import 'package:arozd_cv/ui/constants/app_styles.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,18 +13,11 @@ class InfoNameView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text(
-          locator<MyInfo>().name,
-          style: Theme.of(context).textTheme.headline4.copyWith(
-                color: AppColors.accent,
-              ),
-        ),
+        Text(locator<MyInfo>().name, style: AppStyles.headerTitle(context)),
         SizedBox(height: UISize.pSmall),
         Text(
           locator<MyInfo>().position,
-          style: Theme.of(context).textTheme.subtitle2.copyWith(
-                color: AppColors.accent,
-              ),
+          style: AppStyles.headerSubtitle(context),
         ),
       ],
     );

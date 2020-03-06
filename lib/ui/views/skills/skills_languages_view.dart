@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../locator.dart';
-import 'language_level.dart';
+import 'skills_language_level.dart';
 
 class SkillsLanguagesView extends StatelessWidget {
   @override

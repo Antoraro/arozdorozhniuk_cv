@@ -1,4 +1,5 @@
 import 'package:arozd_cv/ui/constants/app_colors.dart';
+import 'package:arozd_cv/ui/constants/app_styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,13 +13,7 @@ class SkillChip extends StatelessWidget {
     return Chip(
       elevation: 0.0,
       backgroundColor: AppColors.secondary.withOpacity(0.2),
-      label: Text(
-        name,
-        style: Theme.of(context).textTheme.button.copyWith(
-              color: AppColors.dark,
-              fontSize: 13.0,
-            ),
-      ),
+      label: Text(name, style: AppStyles.chipText(context)),
     );
   }
 }

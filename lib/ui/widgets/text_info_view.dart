@@ -1,3 +1,4 @@
+import 'package:arozd_cv/ui/constants/app_styles.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/widgets/base_card.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class TextInfoView extends StatelessWidget {
       header: header,
       child: Padding(
         padding: EdgeInsets.only(top: UISize.pSmall),
-        child: Text(description, style: Theme.of(context).textTheme.button),
+        child: Text(description, style: AppStyles.baseText(context)),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:arozd_cv/config/my_info.dart';
+import 'package:arozd_cv/ui/constants/app_styles.dart';
 import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:flutter/material.dart';
 
@@ -43,20 +44,13 @@ class BaseListTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Text(data.title,
-                    style: Theme.of(context).textTheme.headline6.copyWith(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.w600,
-                        )),
+                Text(data.title, style: AppStyles.baseListTileHeader(context)),
                 Text('${data.dateFrom} - ${data.dateTo}'),
               ],
             ),
           ),
           onlyHeader
-              ? Text(
-                  data.place,
-                  style: Theme.of(context).textTheme.caption,
-                )
+              ? Text(data.place, style: AppStyles.baseListTileTrailing(context))
               : SizedBox.shrink(),
         ],
       ),
@@ -72,15 +66,10 @@ class BaseListTile extends StatelessWidget {
         children: <Widget>[
           Text(
             p.name,
-            style: Theme.of(context).textTheme.subtitle2.copyWith(
-                  fontWeight: FontWeight.w600,
-                ),
+            style: AppStyles.projectInfoName(context),
           ),
           p.description != null
-              ? Text(
-                  p.description,
-                  style: Theme.of(context).textTheme.button,
-                )
+              ? Text(p.description, style: AppStyles.baseText(context))
               : SizedBox.shrink(),
           _buildResponsibilities(context, p),
         ],
@@ -96,14 +85,12 @@ class BaseListTile extends StatelessWidget {
         SizedBox(height: UISize.pSmall),
         Text(
           'Responsibilities:',
-          style: Theme.of(context).textTheme.bodyText2.copyWith(
-                decoration: TextDecoration.underline,
-              ),
+          style: AppStyles.responsibilitiesHeader(context),
         ),
         SizedBox(height: UISize.pSmall / 2),
         Text(
           ' - ${project.responsibilities.join('\n - ')}',
-          style: Theme.of(context).textTheme.button,
+          style: AppStyles.baseText(context),
         ),
       ],
     );
