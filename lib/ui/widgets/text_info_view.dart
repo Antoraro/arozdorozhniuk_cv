@@ -15,7 +15,7 @@ class TextInfoView extends StatelessWidget {
     return BaseCard(
       header: header,
       child: Padding(
-        padding: EdgeInsets.only(top: UISize.pSmall),
+        padding: EdgeInsets.symmetric(vertical: UISize.pSmall),
         child: Text(description, style: AppStyles.baseText(context)),
       ),
     );

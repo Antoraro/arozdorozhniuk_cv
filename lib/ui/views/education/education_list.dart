@@ -1,5 +1,6 @@
 import 'package:arozd_cv/config/my_info.dart';
 import 'package:arozd_cv/locator.dart';
+import 'package:arozd_cv/ui/constants/ui_size.dart';
 import 'package:arozd_cv/ui/widgets/base_card.dart';
 import 'package:arozd_cv/ui/widgets/base_list_tile.dart';
 import 'package:flutter/material.dart';
@@ -13,8 +14,11 @@ class EducationList extends StatelessWidget {
     }
     return BaseCard(
       header: 'EDUCATION',
-      child: Column(
-        children: educationList.map((e) => BaseListTile(data: e)).toList(),
+      child: Padding(
+        padding: EdgeInsets.only(bottom: UISize.pSmall),
+        child: Column(
+          children: educationList.map((e) => BaseListTile(data: e)).toList(),
+        ),
       ),
     );
   }

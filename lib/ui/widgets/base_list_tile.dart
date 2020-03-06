@@ -60,7 +60,7 @@ class BaseListTile extends StatelessWidget {
   Widget _buildProjectInfo(BuildContext context, Project p) {
     if (p.name == null) return SizedBox.shrink();
     return Padding(
-      padding: EdgeInsets.only(top: UISize.pSmall),
+      padding: EdgeInsets.only(top: UISize.pMedium),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -79,20 +79,23 @@ class BaseListTile extends StatelessWidget {
 
   Widget _buildResponsibilities(BuildContext context, Project project) {
     if (project.responsibilities == null) return SizedBox.shrink();
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        SizedBox(height: UISize.pSmall),
-        Text(
-          'Responsibilities:',
-          style: AppStyles.responsibilitiesHeader(context),
-        ),
-        SizedBox(height: UISize.pSmall / 2),
-        Text(
-          ' - ${project.responsibilities.join('\n - ')}',
-          style: AppStyles.baseText(context),
-        ),
-      ],
+    return Padding(
+      padding: EdgeInsets.only(top: UISize.pSmall),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          SizedBox(height: UISize.pSmall),
+          Text(
+            'Responsibilities:',
+            style: AppStyles.responsibilitiesHeader(context),
+          ),
+          SizedBox(height: UISize.pSmall / 2),
+          Text(
+            ' - ${project.responsibilities.join('\n - ')}',
+            style: AppStyles.baseText(context),
+          ),
+        ],
+      ),
     );
   }
 }
